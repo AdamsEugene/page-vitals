@@ -1,25 +1,28 @@
 <template>
-    <div class="stepper-wrapper">
-        <div class="stepper">
-          <div class="title">Initial Diagnostic</div><br>
-        <div class="stepper-line"></div>
-        <div class="stepper-labels">
-            <div v-for="(label, index) in steps" :key="index" class="stepper-label" :class="{ 'active': currentStep >= index, 'completed': currentStep > index }" @click="setCurrentStep(index)">
-  <div class="stepper-circle">
-    <div class="checkmark" v-if="currentStep > index">&#10003;</div>
-  </div>
-  <div class="stepper-text">{{ label }}</div>
-</div>
-        </div>
-      </div>
-      <div class="content-wrapper">
-        <div class="stepper-content">
-          <div v-for="(content, index) in contents" :key="index" class="stepper-pane" v-show="currentStep === index">
-            {{ content }}
+    <div class="page_vitals_stepper-wrapper">
+      <div class="page_vitals_stepper">
+        <div class="page_vitals_title">Initial Diagnostic</div><br>
+        <div class="page_vitals_stepper-line"></div>
+        <div class="page_vitals_stepper-labels">
+          <div v-for="(label, index) in steps" :key="index" class="page_vitals_stepper-label" :class="{ 'active': currentStep >= index, 'completed': currentStep > index }" @click="setCurrentStep(index)">
+            <div class="page_vitals_stepper-circle">
+              <div class="page_vitals_checkmark" v-if="currentStep > index">&#10003;</div>
+            </div>
+            <div class="page_vitals_stepper-text">{{ label }}</div>
           </div>
         </div>
-        <div class="controls">
-          <button id="page_vitals_button" class="back" @click="prevStep" :disabled="currentStep === 0" v-if="currentStep !== 0">Back</button>
+      </div>
+      <div class="page_vitals_content-wrapper">
+        <div class="page_vitals_stepper-content">
+            <div class="page_vitals_stepper-pane">
+                <Step1Component v-if="currentStep === 0" />
+                <Step2Component v-if="currentStep === 1" />
+                <Step3Component v-if="currentStep === 2" />
+            </div>
+        </div>
+        <div class="page_vitals_controls">
+          <button id="page_vitals_button" class="page_vitals_back" @click="prevStep" :disabled="currentStep === 0">Back</button>
+          <!-- <button id="page_vitals_button" class="back" @click="prevStep" :disabled="currentStep === 0" v-if="showBackButton">Back</button> -->
           <button id="page_vitals_button" @click="nextStep" :disabled="currentStep === steps.length - 1">Next</button>
         </div>
       </div>
@@ -27,26 +30,38 @@
   </template>
   
   <script>
+  import Step1Component from '../components/Step1Component.vue';
+  import Step2Component from '../components/Step2Component.vue';
+  import Step3Component from '../components/Step3Component.vue';
+  
   export default {
     data() {
       return {
         steps: ['Copy Analysis', 'Site Speed', 'Error Messages'],
-        contents: ['Content for Step 1', 'Content for Step 2', 'Content for Step 3'],
-        currentStep: 0 
+        currentStep: 0,
+        showBackButton: false 
       };
+    },
+    components: {
+      Step1Component,
+      Step2Component,
+      Step3Component
     },
     methods: {
       setCurrentStep(index) {
         this.currentStep = index;
+        this.showBackButton = index !== 0;
       },
       nextStep() {
         if (this.currentStep < this.steps.length - 1) {
           this.currentStep++;
+          this.showBackButton = true;
         }
       },
       prevStep() {
         if (this.currentStep > 0) {
           this.currentStep--;
+          this.showBackButton = this.currentStep !== 0;
         }
       }
     }
@@ -54,27 +69,30 @@
   </script>
   
   <style scoped>
-  .stepper-content {
+  .page_vitals_stepper-content {
   flex-grow: 1;
-  width: 816px;
+  width: 800px;
+  background: #F6F6F6;
+  border-radius: 8px;
 }
 
-  .stepper-wrapper {
+  .page_vitals_stepper-wrapper {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
+    /* height: 100vh; */
   }
 
-  .content-wrapper {
+  .page_vitals_content-wrapper {
   margin-left: 74px;
-  width: 816px;
+  width: 800px;
 }
 
-  .stepper {
+  .page_vitals_stepper {
     align-items: flex-start;
   }
 
-  .title {
+  .page_vitals_title {
   color: var(--Grey-White, #FFF);
   font-family: Montserrat;
   font-size: 20px;
@@ -84,17 +102,17 @@
   margin-bottom: 20px;
 }
 
-  .stepper-line {
+  .page_vitals_stepper-line {
     background-color: #ccc;
     width: 2px;
     height: 100%;
     margin-right: 20px;
   }
-  .stepper-labels {
+  .page_vitals_stepper-labels {
     display: flex;
     flex-direction: column;
   }
-  .stepper-label {
+  .page_vitals_stepper-label {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -102,7 +120,7 @@
     font-size: 18px;
     color: var(--Grey-White, #FFF);;
   }
-  .stepper-label .stepper-circle {
+  .page_vitals_stepper-label .page_vitals_stepper-circle {
     position: relative;
     width: 20px;
     height: 20px;
@@ -111,30 +129,27 @@
     border: 2px solid #F6F6F6;
     margin-right: 10px;
   }
-  .stepper-label.active .stepper-circle {
+  .page_vitals_stepper-label.active .page_vitals_stepper-circle {
     background-color: #f6f6f6;
   }
-  .stepper-text {
+  .page_vitals_stepper-text {
     font-size: 16px;
   }
-  .stepper-content {
-    flex-grow: 1;
-  }
-  .stepper-pane {
-    padding: 40px 20px;
+
+  .page_vitals_stepper-pane {
+    padding: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
     margin-top: -40px;
   }
-  .controls {
+  .page_vitals_controls {
     display: flex;
   justify-content: space-between;
   margin-top: 20px;
   }
   
- 
-  .stepper-label:not(:last-child) .stepper-circle::after {
+  .page_vitals_stepper-label:not(:last-child) .page_vitals_stepper-circle::after {
     content: '';
     position: absolute;
     width: 2px;
@@ -158,13 +173,12 @@
     cursor: pointer;
   }
 
-  .back{
+  .page_vitals_back{
     background-color: #004F3B !important;
     color: var(--Grey-White, #FFF) !important;
   }
 
-
-.checkmark {
+.page_vitals_checkmark {
   position: absolute;
   top: 50%;
   left: 50%;
