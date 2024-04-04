@@ -36,6 +36,9 @@
 <style scoped>
 #page_vitals_get_started_cover_div{
   width: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #page_vitals_get_started_cover_heading{
