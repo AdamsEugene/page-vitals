@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import GetStarted from './components/GetStarted.vue'
+import Steppers from './components/Steppers.vue'
 </script>
 
 <template>
   <div id="app">
-    <GetStarted />
+    <!-- <GetStarted /> -->
+    <Steppers />
   </div>
 </template>
 
