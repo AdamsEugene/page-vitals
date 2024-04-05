@@ -2,43 +2,51 @@
 </script>
 
 <template>
-  <section id="page_vitals_get_started_cover_div">
-
-    <h5 id="page_vitals_get_started_cover_heading">Initial Diagnostic</h5>
-    <p id="page_vitals_get_started_cover_content">
-      While waiting for UX observations from your heatmap data, check out these initial insights to get started optimizing your site
+  <section class="page_vitals_get_started">
+    <div id="page_vitals_get_started_cover_div">
+      <h5 id="page_vitals_get_started_cover_heading">Initial Diagnostic</h5>
+      <p id="page_vitals_get_started_cover_content">
+        While waiting for UX observations from your heatmap data, check out these initial insights to get started optimizing your site
+      </p>
+  
+    <div id="page_vitals_stepper_cover">
+    <div id="page_vitails_mk-stepper">
+      <details class="mk-stepper-step">
+        <summary class="mk-stepper-step__header"><span class="mk-stepper-step__icon"></span><span class="mk-stepper-step__label">Copy Analysis</span></summary>
+      </details>
+      <details class="mk-stepper-step">
+        <summary class="mk-stepper-step__header"><span class="mk-stepper-step__icon"></span><span class="mk-stepper-step__label">Site Speed</span></summary>
+      </details>
+      <details class="mk-stepper-step">
+        <summary class="mk-stepper-step__header"><span class="mk-stepper-step__icon"></span><span class="mk-stepper-step__label">Error Messages</span></summary>
+      </details>
+    </div>
+    <button id="page_vital_get_started_button">
+      Get Started
+    </button>
+  
+    <p id="page_vitals_return_text">
+      Return to Dashboard
     </p>
-
-  <div id="page_vitals_stepper_cover">
-  <div id="page_vitails_mk-stepper">
-    <details class="mk-stepper-step">
-      <summary class="mk-stepper-step__header"><span class="mk-stepper-step__icon"></span><span class="mk-stepper-step__label">Copy Analysis</span></summary>
-    </details>
-    <details class="mk-stepper-step">
-      <summary class="mk-stepper-step__header"><span class="mk-stepper-step__icon"></span><span class="mk-stepper-step__label">Site Speed</span></summary>
-    </details>
-    <details class="mk-stepper-step">
-      <summary class="mk-stepper-step__header"><span class="mk-stepper-step__icon"></span><span class="mk-stepper-step__label">Error Messages</span></summary>
-    </details>
   </div>
-  <button id="page_vital_get_started_button">
-    Get Started
-  </button>
-
-  <p id="page_vitals_return_text">
-    Return to Dashboard
-  </p>
-</div>
-
+  
+    </div>
   </section>
 </template>
 
 <style scoped>
+.page_vitals_get_started{
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+z-index: 1;
+}
+
 #page_vitals_get_started_cover_div{
-  width: 440px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 440px; 
 }
 
 #page_vitals_get_started_cover_heading{

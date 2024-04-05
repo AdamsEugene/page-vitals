@@ -83,11 +83,16 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100vw;
+    background-color: rgba(77, 88, 97, 0.90);
+    position: fixed;
+    z-index: -1;
   }
   .page_vitals_stepper-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    /* width: 100%; */
     /* height: 100vh; */
   }
 
@@ -176,7 +181,7 @@
     background: var(--Grey-White, #FFF);
     box-shadow: 0px 1px 2px 0px rgba(26, 40, 53, 0.09);
     color: var(--Primary-03-Main, #00936F);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 28px;
     cursor: pointer;

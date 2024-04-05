@@ -52,13 +52,13 @@ export default {
     handleThumbsUpClick() {
       this.thumbsUpClicked = !this.thumbsUpClicked;
       if (this.thumbsUpClicked) {
-        this.thumbsDownClicked = false; // Unselect thumbs down
+        this.thumbsDownClicked = false;
       }
     },
     handleThumbsDownClick() {
       this.thumbsDownClicked = !this.thumbsDownClicked;
       if (this.thumbsDownClicked) {
-        this.thumbsUpClicked = false; // Unselect thumbs up
+        this.thumbsUpClicked = false; 
       }
     }
   }
@@ -69,7 +69,7 @@ export default {
   .page_vitals_step1_content_wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Push content to the top and bottom */
+    justify-content: space-between;
     height: 480px;
   }
   
@@ -125,7 +125,6 @@ margin-right: 10px;
   stroke-width: 0.5px;
 }
 
-/* Style SVG icons */
 svg {
   width: 24px;
   height: 24px; 
