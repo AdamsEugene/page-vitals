@@ -44,7 +44,7 @@
 #page_vitals_get_started_cover_heading{
   color: var(--Grey-White, #FFF);
 text-align: center;
-font-size: 42px;
+font-size: 38px;
 font-weight: 600;
 margin-bottom: 0px;
 }
@@ -134,7 +134,7 @@ align-items: center;
 border-radius: 10px;
 border: 2px solid white;
 color: var(--Success-05-Darker, #0B7448);
-font-size: 20px;
+font-size: 18px;
 font-weight: 600;
 line-height: 28px;
 cursor: pointer;

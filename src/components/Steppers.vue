@@ -1,4 +1,5 @@
 <template>
+  <div class="page_vitals_steppers_cover">
     <div class="page_vitals_stepper-wrapper">
       <div class="page_vitals_stepper">
         <div class="page_vitals_title">Initial Diagnostic</div><br>
@@ -27,6 +28,7 @@
         </div>
       </div>
     </div>
+  </div>
   </template>
   
   <script>
@@ -76,6 +78,12 @@
   border-radius: 8px;
 }
 
+  .page_vitals_steppers_cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
   .page_vitals_stepper-wrapper {
     display: flex;
     align-items: flex-start;
@@ -100,6 +108,7 @@
   font-weight: 600;
   line-height: normal;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
   .page_vitals_stepper-line {
@@ -141,7 +150,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
-    margin-top: -40px;
+    /* margin-top: -40px; */
   }
   .page_vitals_controls {
     display: flex;

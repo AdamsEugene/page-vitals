@@ -4,7 +4,7 @@ import Steppers from './components/Steppers.vue'
 </script>
 
 <template>
-  <div id="app" class="centered-content">
+  <div id="app" >
     <!-- <GetStarted /> -->
     <Steppers />
   </div>

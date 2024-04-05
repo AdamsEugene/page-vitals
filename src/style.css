@@ -1,19 +1,28 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-  margin: 50;
-  padding: 50px;
-  background-image: url(../src/assets/images/bg.png);
-  background-size:100vw 100vh; 
+html,body{
+  margin: 0;
+ 
+}
+
+body{
+  background-image: url(../src/assets/images/bg.png) !important; 
+  background-size:100% 100% !important; 
+}
+
+#app {
+  /* margin: 50; */
+  /* padding: 50px; */
+  /* background-image: url(../src/assets/images/bg.png); */
+  background-size:100% 100%; 
   background-repeat: no-repeat;
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
-  /* height: 90vh; */
-  overflow: hidden;
-  position: relative; /* Required for absolute positioning */
-  height: 90vh;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative;  */
+  height: 100vh;
 }
 
 *, body{
@@ -21,9 +30,9 @@ body {
 }
 
 .centered-content {
-  position: absolute;
-  width: 100%;
+  /* position: absolute;  */
+  /* width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
