@@ -57,7 +57,7 @@
           </clipPath>
           </defs>
           </svg>
-        <span class="page_vitals_tab1_content_header">Copy All</span>
+        <span id="page_vital_copy_text"  class="page_vitals_tab1_content_header">Copy All</span>
       </div>
       </div>
 
@@ -96,7 +96,7 @@
     <!--################## Desktop Section Tab ####################-->
     <div class="page_vitals_tab2_content" v-show="activeTab === 'desktop'">
 
-<!-- section 1 (mobile recommendations) -->
+<!-- section 1 (desktop recommendations) -->
 <div class="page_vitals_tab1_content_header_wrapper">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M10 2.5L8.40667 7.34417C8.32512 7.59209 8.1865 7.8174 8.00195 8.00195C7.8174 8.1865 7.59209 8.32512 7.34417 8.40667L2.5 10L7.34417 11.5933C7.59209 11.6749 7.8174 11.8135 8.00195 11.9981C8.1865 12.1826 8.32512 12.4079 8.40667 12.6558L10 17.5L11.5933 12.6558C11.6749 12.4079 11.8135 12.1826 11.9981 11.9981C12.1826 11.8135 12.4079 11.6749 12.6558 11.5933L17.5 10L12.6558 8.40667C12.4079 8.32512 12.1826 8.1865 11.9981 8.00195C11.8135 7.8174 11.6749 7.59209 11.5933 7.34417L10 2.5Z" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -123,7 +123,7 @@
     </clipPath>
     </defs>
     </svg>
-  <span class="page_vitals_tab1_content_header">Copy All</span>
+  <span id="page_vital_copy_text" class="page_vitals_tab1_content_header ">Copy All</span>
 </div>
 </div>
 
@@ -337,6 +337,10 @@ font-size: 13px;
 font-weight: 600;
 margin-left: 6px;
   /* height: 100px; */
+}
+
+#page_vital_copy_text{
+  color: #00936F !important;
 }
 
 .page_vitals_metrics_numbers{
