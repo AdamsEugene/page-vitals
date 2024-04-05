@@ -66,6 +66,7 @@ export default {
   height: 100%;
   width: 100vw;
   background-color: rgba(77, 88, 97, 0.9);
+  z-index: 1;
 }
 
 .page_vitals_stepper-pane {
