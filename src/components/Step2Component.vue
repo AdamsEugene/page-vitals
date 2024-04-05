@@ -333,7 +333,7 @@ font-weight: 500;
   border-radius: 8px;
   padding: 16px 10px;
   color: #34404B;
-font-size: 14px;
+font-size: 13px;
 font-weight: 600;
 margin-left: 6px;
   /* height: 100px; */
@@ -352,16 +352,13 @@ font-weight: 600;
 .page_vitals_color_red{
   background-color: #FFE7D8;
   color: #FF4A3D;
-  /* font-weight: 600; */
 }
 .page_vitals_color_orange{
 background-color: #FDF1E3;
 color: #CE7422;
-/* font-weight: 600; */
 }
 .page_vitals_color_lightgreen{
   background-color: #D7FCD2;
   color: #12904E;
-  /* font-weight: 600; */
 }
 </style>
