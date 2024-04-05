@@ -1,11 +1,11 @@
 <template>
-  <div class="page_vitals_steppers_cover">
+  <div :class="{'page_vitals_steppers_cover': true, 'page_vital_hidden': modalVisible}">
     <div class="page_vitals_stepper-wrapper">
       <div class="page_vitals_content-wrapper">
         <div class="page_vitals_stepper-content">
           <div class="page_vitals_stepper-pane">
             <div class="page_vitals_step1_content_wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" @click="hideModal">
                 <path
                   stroke="black"
                   stroke-width="1"
@@ -21,7 +21,7 @@
                 <textarea rows="14" placeholder="Enter feedback"></textarea>
 
                 <div class="page_vitals_controls">
-                  <button id="page_vitals_button">Cancel</button>
+                  <span id="page_vitals_button"  @click="hideModal">Cancel</span>
                   <button id="page_vitals_button" class="page_vitals_submit">
                     Submit
                   </button>
@@ -37,10 +37,14 @@
     
 <script>
 export default {
+  data() {
+    return {
+      modalVisible: false
+    };
+  },
   methods: {
-    toggleModal() {
-      // Toggle the visibility of the modal
-      this.$emit('close-modal'); // Emit an event to inform the parent component
+    hideModal() {
+      this.modalVisible = true; // Set the data property to true to hide the modal
     }
   }
 };
@@ -144,5 +148,10 @@ textarea {
   background-color: #008160 !important;
   color: var(--Grey-White, #fff) !important;
 }
+
+.page_vital_hidden {
+  display: none;
+}
+
 </style>
     

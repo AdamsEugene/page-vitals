@@ -84,7 +84,7 @@
     justify-content: center;
     height: 100%;
     width: 100vw;
-    background-color: rgba(77, 88, 97, 0.90);
+    /* background-color: rgba(77, 88, 97, 0.90); */
     position: fixed;
     /* z-index: -1; */
   }

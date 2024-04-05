@@ -8,7 +8,7 @@ import FeedbackModal from './components/FeedbackModal.vue';
   <div id="app" >
     <!-- <GetStarted /> -->
     <Steppers />
-    <!-- <FeedbackModal/> -->
+    <FeedbackModal/>
   </div>
 </template>
 
