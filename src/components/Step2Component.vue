@@ -57,7 +57,7 @@
           </clipPath>
           </defs>
           </svg>
-        <span id="page_vital_copy_text"  class="page_vitals_tab1_content_header">Copy All</span>
+        <span id="page_vital_copy_text" class="page_vitals_tab1_content_header">Copy All</span>
       </div>
       </div>
 
