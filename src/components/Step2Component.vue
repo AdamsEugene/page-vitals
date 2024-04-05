@@ -29,6 +29,8 @@
     
     <!--################## Mobile Section Tab ######################-->
     <div class="page_vitals_tab1_content" v-show="activeTab === 'mobile'">
+
+      <!-- section 1 (mobile recommendations) -->
       <div class="page_vitals_tab1_content_header_wrapper">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
         <path d="M10 2.5L8.40667 7.34417C8.32512 7.59209 8.1865 7.8174 8.00195 8.00195C7.8174 8.1865 7.59209 8.32512 7.34417 8.40667L2.5 10L7.34417 11.5933C7.59209 11.6749 7.8174 11.8135 8.00195 11.9981C8.1865 12.1826 8.32512 12.4079 8.40667 12.6558L10 17.5L11.5933 12.6558C11.6749 12.4079 11.8135 12.1826 11.9981 11.9981C12.1826 11.8135 12.4079 11.6749 12.6558 11.5933L17.5 10L12.6558 8.40667C12.4079 8.32512 12.1826 8.1865 11.9981 8.00195C11.8135 7.8174 11.6749 7.59209 11.5933 7.34417L10 2.5Z" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -59,19 +61,102 @@
       </div>
       </div>
 
-      <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper">
-        <p class="page_vitals_content_ul_heading">Compress and resize images to reduce their file size without sacrificing quality.</p>
-    </div>
-      <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin">
-        <p class="page_vitals_content_ul_heading">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity.</p>
-    </div>
-      <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin">
-        <p class="page_vitals_content_ul_heading">Eliminate render-blocking resources.</p>
-    </div>
+      <!-- recommendations list -->
+      <div>
+        <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper">
+          <p class="page_vitals_content_ul_heading">Compress and resize images to reduce their file size without sacrificing quality.</p>
+      </div>
+        <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin">
+          <p class="page_vitals_content_ul_heading">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity.</p>
+      </div>
+        <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin">
+          <p class="page_vitals_content_ul_heading">Eliminate render-blocking resources.</p>
+      </div>
+      </div>
+
+      <!-- section 2 Metric Breakdown -->
+      <section>
+        <div class="page_vitals_tab1_content_header_wrapper metrics_breakdown">
+          <span class="page_vitals_tab1_content_header">Metric Breakdown</span>
+        </div>
+
+        <div class="page_vitals_grid-container">
+    <!-- Repeat this div for each box -->
+    <div class="page_vitals_grid-item">Largest Contentful Paint (LCP) <button class="page_vitals_metrics_numbers page_vitals_color_red">4.3 s</button> </div>
+    <div class="page_vitals_grid-item">Interaction to Next Paint (INP) <button class="page_vitals_metrics_numbers page_vitals_color_orange">338 ms</button> </div>
+    <div class="page_vitals_grid-item">Cumulative Layout Shift (CLS) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">0</button> </div>
+    <div class="page_vitals_grid-item">First Contentful Paint (ECP) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">1.7 s</button> </div>
+    <div class="page_vitals_grid-item">First Input Delay (FID) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">30 ms</button> </div>
+    <div class="page_vitals_grid-item">Time to First Byte (TTFB) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">0.5 s</button> </div>
+    <!-- Repeat as needed -->
+  </div>
+      </section>
     </div>
 
     <!--################## Desktop Section Tab ####################-->
-    <div class="page_vitals_tab2_content" v-show="activeTab === 'desktop'">desktop content</div>
+    <div class="page_vitals_tab2_content" v-show="activeTab === 'desktop'">
+
+<!-- section 1 (mobile recommendations) -->
+<div class="page_vitals_tab1_content_header_wrapper">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M10 2.5L8.40667 7.34417C8.32512 7.59209 8.1865 7.8174 8.00195 8.00195C7.8174 8.1865 7.59209 8.32512 7.34417 8.40667L2.5 10L7.34417 11.5933C7.59209 11.6749 7.8174 11.8135 8.00195 11.9981C8.1865 12.1826 8.32512 12.4079 8.40667 12.6558L10 17.5L11.5933 12.6558C11.6749 12.4079 11.8135 12.1826 11.9981 11.9981C12.1826 11.8135 12.4079 11.6749 12.6558 11.5933L17.5 10L12.6558 8.40667C12.4079 8.32512 12.1826 8.1865 11.9981 8.00195C11.8135 7.8174 11.6749 7.59209 11.5933 7.34417L10 2.5Z" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.833 2.5V5.83333" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.833 14.1667V17.5" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14.167 4.16666H17.5003" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14.167 15.8333H17.5003" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span class="page_vitals_tab1_content_header">Desktop Recommendations</span>
+</div>
+
+<div class="page_vitals_info_wrapper">
+  <p class="page_vitals_info_text">To improve your site speed, consider the following:</p>
+
+  <div class="page_vitals_tab1_content_header_wrapper">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <g clip-path="url(#clip0_1278_5460)">
+    <path d="M16.667 6.66666H8.33366C7.41318 6.66666 6.66699 7.41285 6.66699 8.33332V16.6667C6.66699 17.5871 7.41318 18.3333 8.33366 18.3333H16.667C17.5875 18.3333 18.3337 17.5871 18.3337 16.6667V8.33332C18.3337 7.41285 17.5875 6.66666 16.667 6.66666Z" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3.33366 13.3333C2.41699 13.3333 1.66699 12.5833 1.66699 11.6667V3.33332C1.66699 2.41666 2.41699 1.66666 3.33366 1.66666H11.667C12.5837 1.66666 13.3337 2.41666 13.3337 3.33332" stroke="#016F52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_1278_5460">
+    <rect width="20" height="20" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+  <span class="page_vitals_tab1_content_header">Copy All</span>
+</div>
+</div>
+
+<!-- recommendations list -->
+<div>
+  <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin">
+    <p class="page_vitals_content_ul_heading">Eliminate render-blocking resources.</p>
+</div>
+  <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper">
+    <p class="page_vitals_content_ul_heading">Compress and resize images to reduce their file size without sacrificing quality.</p>
+</div>
+  <div class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin">
+    <p class="page_vitals_content_ul_heading">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity.</p>
+</div>
+</div>
+
+<!-- section 2 Metric Breakdown -->
+<section>
+  <div class="page_vitals_tab1_content_header_wrapper metrics_breakdown">
+    <span class="page_vitals_tab1_content_header">Metric Breakdown</span>
+  </div>
+
+  <div class="page_vitals_grid-container">
+<div class="page_vitals_grid-item">First Contentful Paint (ECP) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">1.7 s</button> </div>
+<div class="page_vitals_grid-item">First Input Delay (FID) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">30 ms</button> </div>
+<div class="page_vitals_grid-item">Time to First Byte (TTFB) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">0.5 s</button> </div>
+<div class="page_vitals_grid-item">Largest Contentful Paint (LCP) <button class="page_vitals_metrics_numbers page_vitals_color_red">4.3 s</button> </div>
+<div class="page_vitals_grid-item">Interaction to Next Paint (INP) <button class="page_vitals_metrics_numbers page_vitals_color_orange">338 ms</button> </div>
+<div class="page_vitals_grid-item">Cumulative Layout Shift (CLS) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">0</button> </div>
+
+</div>
+</section>
+</div>
 
 </div>
 </template>
@@ -80,7 +165,7 @@
 export default {
   data() {
     return {
-      activeTab: 'mobile' // Initially show mobile content
+      activeTab: 'mobile'
     };
   },
   methods: {
@@ -96,6 +181,17 @@ export default {
   display: flex;
   flex-direction: column;
   height: 480px;
+}
+.page_vitals_tab1_content, .page_vitals_tab2_content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.page_vitals_tab1_content::-webkit-scrollbar, .page_vitals_tab2_content::-webkit-scrollbar {
+  display: none;
 }
 
 .page_vitals_button_wrapper {
@@ -220,4 +316,52 @@ font-weight: 500;
   .page_vitals_tab1_content_margin{
     margin-top: 10px;
   }
+
+  .metrics_breakdown{
+    margin-top: 28px;
+  }
+
+  .page_vitals_grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 15px; 
+}
+
+.page_vitals_grid-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px 10px;
+  color: #34404B;
+font-size: 14px;
+font-weight: 600;
+margin-left: 6px;
+  /* height: 100px; */
+}
+
+.page_vitals_metrics_numbers{
+width: 72px;
+padding: 6px 10px;
+display: block;
+margin-top: 30px;
+border: none;
+border-radius: 4px;
+font-weight: 600;
+}
+
+.page_vitals_color_red{
+  background-color: #FFE7D8;
+  color: #FF4A3D;
+  /* font-weight: 600; */
+}
+.page_vitals_color_orange{
+background-color: #FDF1E3;
+color: #CE7422;
+/* font-weight: 600; */
+}
+.page_vitals_color_lightgreen{
+  background-color: #D7FCD2;
+  color: #12904E;
+  /* font-weight: 600; */
+}
 </style>
