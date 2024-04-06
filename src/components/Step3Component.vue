@@ -18,19 +18,37 @@
     <!-- ##################### Accordion section #######################-->
     <div class="page_vitals_accordion-container">
       <div class="page_vitals_accordion_content_header">
-        <div>
-          <span>hello</span>
-          <span>hello</span>
+        <div class="page_vitals_error_tabs_cover">
+          <span class="page_vitals_error_tab">Inbox</span>
+          <span class="page_vitals_error_tab page_vitals_archived">Archived</span>
         </div>
-        <span>5 Errors</span>
+        <span class="paege_vitals_error_text">5 Errors</span>
       </div>
       <!-- Accordion 1 -->
       <div class="page_vitals_accordion_cover">
         <input type="checkbox" id="accordion1" class="page_vitals_accordion-checkbox">
-        <label for="accordion1" class="page_vitals_accordion-heading page_vitals_padding">Uncaught Error: Yotpo Loyalty
-          SDK loader scripUncaught Error: loaded Tx60AxAaFloLi0......
+        <label for="accordion1" class="page_vitals_accordion-heading page_vitals_padding">
+           <span class="page_vitals_error_indicators_cover" >
+            <div class="page_vitals_red_indicator_cover">
+              <span class="page_vitals_error_indicators_red"></span>
+              <span class="page_vitals_error_indicators_red"></span>
+              <span class="page_vitals_error_indicators_red"></span>
+            </div>
+
+            <div>
+              <span>(1)</span>
+            </div>
+           </span> 
+           <span class="page_vitals_accordion_header_cover">
+            <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
+          <path d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00001C14.6663 4.31811 11.6816 1.33334 7.99967 1.33334C4.31778 1.33334 1.33301 4.31811 1.33301 8.00001C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z" fill="#B71E2D"/>
+          <path d="M10 6L6 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 6L10 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> 
+            <span class="ellipsis-text">Uncaught Error: Yotpo Loyalty SDK loader scrip already loaded Tx60AxAaFloLi0S7 </span>
+          </span>
           <span class="page_vitals_arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
               class="bi bi-chevron-down" viewBox="0 0 16 16">
               <path stroke="black" stroke-width="1" fill-rule="evenodd"
                 d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
@@ -92,12 +110,31 @@
         </div>
       </div>
 
-      <!-- Accordion 2 -->
-      <div class="page_vitals_accordion_cover">
+       <!-- Accordion 2 -->
+       <div class="page_vitals_accordion_cover">
         <input type="checkbox" id="accordion2" class="page_vitals_accordion-checkbox">
-        <label for="accordion2" class="page_vitals_accordion-heading page_vitals_padding">Uncaught (in promise) DOMException: Failed to execute 966447066?random=171...
+        <label for="accordion2" class="page_vitals_accordion-heading page_vitals_padding">
+           <span class="page_vitals_error_indicators_cover" >
+            <div class="page_vitals_red_indicator_cover">
+              <span class="page_vitals_error_indicators_red"></span>
+              <span class="page_vitals_error_indicators_red"></span>
+              <span class="page_vitals_error_indicators_red"></span>
+            </div>
+
+            <div>
+              <span>(3)</span>
+            </div>
+           </span> 
+           <span class="page_vitals_accordion_header_cover">
+            <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
+          <path d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00001C14.6663 4.31811 11.6816 1.33334 7.99967 1.33334C4.31778 1.33334 1.33301 4.31811 1.33301 8.00001C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z" fill="#B71E2D"/>
+          <path d="M10 6L6 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 6L10 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> 
+          Uncaught (in promise) DOMException: Failed to execute 966447066?random=171...
+          </span>
           <span class="page_vitals_arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
               class="bi bi-chevron-down" viewBox="0 0 16 16">
               <path stroke="black" stroke-width="1" fill-rule="evenodd"
                 d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
@@ -159,12 +196,31 @@
         </div>
       </div>
 
-       <!-- Accordion 3 -->
-       <div class="page_vitals_accordion_cover">
+        <!-- Accordion 3 -->
+        <div class="page_vitals_accordion_cover">
         <input type="checkbox" id="accordion3" class="page_vitals_accordion-checkbox">
-        <label for="accordion3" class="page_vitals_accordion-heading page_vitals_padding">[GORGIAS-CHAT] Another Gorgias chat was detect. Check that 01GYCCBXFFSRHT...
+        <label for="accordion3" class="page_vitals_accordion-heading page_vitals_padding">
+           <span class="page_vitals_error_indicators_cover" >
+            <div class="page_vitals_red_indicator_cover">
+              <span class="page_vitals_error_indicators_red"></span>
+              <span class="page_vitals_error_indicators_red"></span>
+              <span class="page_vitals_error_indicators_grey"></span>
+            </div>
+
+            <div>
+              <span>(1)</span>
+            </div>
+           </span> 
+           <span class="page_vitals_accordion_header_cover">
+            <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
+            <path d="M14.4876 12L9.15426 2.66665C9.03797 2.46146 8.86933 2.29078 8.66555 2.17203C8.46176 2.05329 8.23012 1.99072 7.99426 1.99072C7.7584 1.99072 7.52677 2.05329 7.32298 2.17203C7.11919 2.29078 6.95055 2.46146 6.83426 2.66665L1.50093 12C1.38338 12.2036 1.32175 12.4346 1.32227 12.6697C1.32279 12.9047 1.38545 13.1355 1.50389 13.3385C1.62234 13.5416 1.79236 13.7097 1.99673 13.8259C2.20109 13.942 2.43253 14.0021 2.6676 14H13.3343C13.5682 13.9997 13.7979 13.938 14.0005 13.8208C14.203 13.7037 14.3711 13.5354 14.4879 13.3327C14.6048 13.1301 14.6663 12.9002 14.6662 12.6663C14.6662 12.4324 14.6046 12.2026 14.4876 12Z" fill="#F28D15"/>
+            <path d="M8 6V8.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 11.3333H8.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          [GORGIAS-CHAT] Another Gorgias chat was detect. Check that 01GYCCBXFFSRHT...
+          </span>
           <span class="page_vitals_arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
               class="bi bi-chevron-down" viewBox="0 0 16 16">
               <path stroke="black" stroke-width="1" fill-rule="evenodd"
                 d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
@@ -226,12 +282,31 @@
         </div>
       </div>
 
-       <!-- Accordion 4 -->
-       <div class="page_vitals_accordion_cover">
+        <!-- Accordion 4 -->
+        <div class="page_vitals_accordion_cover">
         <input type="checkbox" id="accordion4" class="page_vitals_accordion-checkbox">
-        <label for="accordion4" class="page_vitals_accordion-heading page_vitals_padding">In the future, Permissions Policy feature join-ad-interest-group will not be enable...
+        <label for="accordion4" class="page_vitals_accordion-heading page_vitals_padding">
+           <span class="page_vitals_error_indicators_cover" >
+            <div class="page_vitals_red_indicator_cover">
+              <span class="page_vitals_error_indicators_red"></span>
+              <span class="page_vitals_error_indicators_grey"></span>
+              <span class="page_vitals_error_indicators_grey"></span>
+            </div>
+
+            <div>
+              <span>(1)</span>
+            </div>
+           </span> 
+           <span class="page_vitals_accordion_header_cover">
+            <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
+            <path d="M14.4876 12L9.15426 2.66665C9.03797 2.46146 8.86933 2.29078 8.66555 2.17203C8.46176 2.05329 8.23012 1.99072 7.99426 1.99072C7.7584 1.99072 7.52677 2.05329 7.32298 2.17203C7.11919 2.29078 6.95055 2.46146 6.83426 2.66665L1.50093 12C1.38338 12.2036 1.32175 12.4346 1.32227 12.6697C1.32279 12.9047 1.38545 13.1355 1.50389 13.3385C1.62234 13.5416 1.79236 13.7097 1.99673 13.8259C2.20109 13.942 2.43253 14.0021 2.6676 14H13.3343C13.5682 13.9997 13.7979 13.938 14.0005 13.8208C14.203 13.7037 14.3711 13.5354 14.4879 13.3327C14.6048 13.1301 14.6663 12.9002 14.6662 12.6663C14.6662 12.4324 14.6046 12.2026 14.4876 12Z" fill="#F28D15"/>
+            <path d="M8 6V8.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 11.3333H8.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          In the future, Permissions Policy feature join-ad-interest-group will not be enable...
+          </span>
           <span class="page_vitals_arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
               class="bi bi-chevron-down" viewBox="0 0 16 16">
               <path stroke="black" stroke-width="1" fill-rule="evenodd"
                 d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
@@ -296,9 +371,28 @@
        <!-- Accordion 5 -->
        <div class="page_vitals_accordion_cover">
         <input type="checkbox" id="accordion5" class="page_vitals_accordion-checkbox">
-        <label for="accordion5" class="page_vitals_accordion-heading page_vitals_padding">In a sandboxed environment, AddEventListener may not be behave as expected.
+        <label for="accordion5" class="page_vitals_accordion-heading page_vitals_padding">
+           <span class="page_vitals_error_indicators_cover" >
+            <div class="page_vitals_red_indicator_cover">
+              <span class="page_vitals_error_indicators_red"></span>
+              <span class="page_vitals_error_indicators_grey"></span>
+              <span class="page_vitals_error_indicators_grey"></span>
+            </div>
+
+            <div>
+              <span>(1)</span>
+            </div>
+           </span> 
+           <span class="page_vitals_accordion_header_cover">
+            <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none">
+            <path d="M14.4876 12L9.15426 2.66665C9.03797 2.46146 8.86933 2.29078 8.66555 2.17203C8.46176 2.05329 8.23012 1.99072 7.99426 1.99072C7.7584 1.99072 7.52677 2.05329 7.32298 2.17203C7.11919 2.29078 6.95055 2.46146 6.83426 2.66665L1.50093 12C1.38338 12.2036 1.32175 12.4346 1.32227 12.6697C1.32279 12.9047 1.38545 13.1355 1.50389 13.3385C1.62234 13.5416 1.79236 13.7097 1.99673 13.8259C2.20109 13.942 2.43253 14.0021 2.6676 14H13.3343C13.5682 13.9997 13.7979 13.938 14.0005 13.8208C14.203 13.7037 14.3711 13.5354 14.4879 13.3327C14.6048 13.1301 14.6663 12.9002 14.6662 12.6663C14.6662 12.4324 14.6046 12.2026 14.4876 12Z" fill="#F28D15"/>
+            <path d="M8 6V8.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 11.3333H8.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              In a sandboxed environment, AddEventListener may not be behave as ...
+          </span>
           <span class="page_vitals_arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
               class="bi bi-chevron-down" viewBox="0 0 16 16">
               <path stroke="black" stroke-width="1" fill-rule="evenodd"
                 d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
@@ -495,4 +589,69 @@
   text-align: end;
   cursor: pointer;
 }
+
+.paege_vitals_error_text{
+  color: var(--Grey-800, #34404B);
+font-size: 12px;
+font-weight: 600;
+}
+
+.page_vitals_error_tab{
+  color: var(--Grey-600, #677078);
+font-size: 14px;
+font-weight: 600;
+line-height: 18px; 
+}
+
+.page_vitals_archived{
+  margin-left: 14px;
+}
+
+.page_vitals_error_indicators_cover{
+width: 13%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0px 6px 0px 0px;
+}
+
+.page_vitals_error_indicators_red{
+  border-radius: 1px;
+background: var(--Error-03-Main, #FF4A3D);
+/* padding: 0px 20px; */
+height: 6px;
+flex: 1 0 0;
+align-self: stretch;
+margin-right: 2px;
+}
+.page_vitals_error_indicators_grey{
+  border-radius: 1px;
+background: var(--Error-03-Main, #CCCFD2);
+height: 6px;
+flex: 1 0 0;
+align-self: stretch;
+margin-right: 2px;
+}
+
+.page_vitals_red_indicator_cover{
+  display: flex;
+  width: 50%;
+display: flex;
+justify-content: space-between;
+margin: 0px 6px 0px 0px;
+}
+
+.page_vitals_accordion_header_cover{
+  width: 80%; 
+  display: flex; 
+  align-items: center;
+}
+
+.ellipsis-text {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+  width: 90%;
+}
+
 </style>
