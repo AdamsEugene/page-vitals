@@ -24,6 +24,7 @@
         </div>
         <span class="paege_vitals_error_text">5 Errors</span>
       </div>
+
       <!-- Accordion 1 -->
       <div class="page_vitals_accordion_cover">
         <input type="checkbox" id="accordion1" class="page_vitals_accordion-checkbox">
@@ -45,7 +46,7 @@
           <path d="M10 6L6 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M6 6L10 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg> 
-            <span class="ellipsis-text">Uncaught Error: Yotpo Loyalty SDK loader scrip already loaded Tx60AxAaFloLi0S7 </span>
+            <span class="page_vitals_ellipsis_text">Uncaught Error: Yotpo Loyalty SDK loader scrip already loaded Tx60AxAaFloLi0S7 </span>
           </span>
           <span class="page_vitals_arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -131,7 +132,7 @@
           <path d="M10 6L6 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M6 6L10 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg> 
-          Uncaught (in promise) DOMException: Failed to execute 966447066?random=171...
+          <span class="page_vitals_ellipsis_text">Uncaught (in promise) DOMException: Failed to execute 966447066?random=171...</span>
           </span>
           <span class="page_vitals_arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -217,7 +218,7 @@
             <path d="M8 6V8.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8 11.3333H8.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          [GORGIAS-CHAT] Another Gorgias chat was detect. Check that 01GYCCBXFFSRHT...
+            <span class="page_vitals_ellipsis_text">[GORGIAS-CHAT] Another Gorgias chat was detect. Check that 01GYCCBXFFSRHT...</span>
           </span>
           <span class="page_vitals_arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -303,7 +304,7 @@
             <path d="M8 6V8.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8 11.3333H8.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          In the future, Permissions Policy feature join-ad-interest-group will not be enable...
+            <span class="page_vitals_ellipsis_text">In the future, Permissions Policy feature join-ad-interest-group will not be enable... </span>
           </span>
           <span class="page_vitals_arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -389,7 +390,7 @@
             <path d="M8 6V8.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8 11.3333H8.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-              In a sandboxed environment, AddEventListener may not be behave as ...
+            <span class="page_vitals_ellipsis_text">In a sandboxed environment, AddEventListener may not be behave as ... </span>
           </span>
           <span class="page_vitals_arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -647,11 +648,11 @@ margin: 0px 6px 0px 0px;
   align-items: center;
 }
 
-.ellipsis-text {
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
-  width: 90%;
+.page_vitals_ellipsis_text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 92%;
 }
 
 </style>
