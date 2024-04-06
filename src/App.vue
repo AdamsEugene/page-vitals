@@ -7,13 +7,34 @@ import Success from './components/Success.vue';
 
 <template>
   <div id="app" >
+    <header class="header">
+    <div class="logo">
+    </div>
+  </header>
     <!-- <GetStarted /> -->
-    <!-- <Steppers /> -->
+    <Steppers />
     <!-- <FeedbackModal/> -->
-    <Success/>
+    <!-- <Success/> -->
   </div>
 </template>
 
 <style scoped>
+.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      width: 100vw;
+      overflow: hidden !important;
+      top: -100%;
+    }
 
+    /* Logo styles */
+    .logo {
+      width: 50px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
 </style>

@@ -55,6 +55,7 @@ text-align: center;
 font-size: 38px;
 font-weight: 600;
 margin-bottom: 0px;
+margin-top: 0px;
 }
 
 #page_vitals_get_started_cover_content{
@@ -155,5 +156,7 @@ justify-content: center;
 align-items: center;
 gap: 8px;
 color: #F6F6F6;
+/* padding: 0px;
+    margin: 0px; */
 }
 </style>
