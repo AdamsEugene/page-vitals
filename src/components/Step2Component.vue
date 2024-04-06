@@ -208,7 +208,6 @@ export default {
   padding: 0px;
   margin: 0px;
   color: var(--Primary-03-Main, #00936F);
-  font-family: Montserrat;
   font-size: 13px;
   font-weight: 600;
 }
@@ -330,6 +329,8 @@ font-weight: 500;
 
 .page_vitals_grid-item {
   background-color: #fff;
+  border: 1px solid var(--Grey-200, #E6E7E8);
+  /* box-shadow: 0px 1px 2px 0px rgba(26, 40, 53, 0.09); */
   border-radius: 8px;
   padding: 16px 10px;
   color: #34404B;
