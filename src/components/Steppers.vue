@@ -87,11 +87,12 @@
 
 
   .page_vitals_steppers_cover {
+    /* background-color: red; */
     /* background-size:100% 100% ;  */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 75%;
     width: 100vw;
     position: fixed;
     /* z-index: -1; */
