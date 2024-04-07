@@ -1,7 +1,5 @@
-<!-- <script setup lang="ts">
-</script> -->
-
 <template>
+  <HeaderNav /> 
   <section class="page_vitals_get_started">
     <div id="page_vitals_get_started_cover_div">
       <h5 id="page_vitals_get_started_cover_heading">Initial Diagnostic: <br> Complete! </h5>
@@ -50,6 +48,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import HeaderNav from '../components/HeaderNav.vue';
 const router = useRouter();
 
 const stars = ref([
@@ -81,12 +80,12 @@ const selectStar = (star) => {
 <style scoped>
 .page_vitals_get_started{
 width: 100vw;
-height: 100vh;
+height: 75vh;
 display: flex;
 justify-content: center;
 align-items: center;
-position: absolute;
-z-index: 1;
+/* position: absolute;
+z-index: 1; */
 }
 
 #page_vitals_get_started_cover_div{
@@ -97,11 +96,11 @@ z-index: 1;
 #page_vitals_get_started_cover_heading{
   color: var(--Grey-White, #FFF);
 text-align: center;
-font-size: 38px;
+font-size: 34px;
 font-weight: 600;
 margin-bottom: 10px;
-/* margin-top: 0px; */
-margin-top: -35px;
+margin-top: 0px;
+/* margin-top: -35px; */
 }
 
 #page_vitals_get_started_cover_content{

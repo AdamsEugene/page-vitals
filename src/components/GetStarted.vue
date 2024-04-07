@@ -1,4 +1,18 @@
 <template>
+   <header>
+    <section class="page_vitals_header">
+  <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none">
+  <path d="M39.75 31.2739V31.359C39.7394 33.1246 39.3522 34.8692 38.6125 36.4842C36.599 40.8468 31.6877 44.0048 26.6683 44.1667C26.546 44.1667 26.4124 44.1667 26.2759 44.1667C24.9408 44.1629 23.6143 43.9612 22.3428 43.5685C16.5357 41.7796 14.1355 36.4705 14.1355 36.4705C13.7971 35.7447 13.5517 34.9818 13.4046 34.1987C12.5514 29.5947 15.4806 25.8057 16.0664 25.0484C16.7598 24.1542 17.564 23.3452 18.461 22.6394L20.0734 24.8838L18.751 26.2556C18.3756 26.7056 16.0067 29.6386 16.7603 33.4963C17.6505 38.1058 22.2205 40.0813 22.9798 40.3309C23.1732 40.3968 23.378 40.4599 23.378 40.4599C24.4068 40.7768 25.4834 40.9252 26.5631 40.8989C30.3369 40.7782 34.0253 38.4131 35.5326 35.1371C36.0838 33.9073 36.3739 32.5835 36.3857 31.2437C36.4151 30.2872 36.2688 29.3332 35.9535 28.4259C35.7961 27.9942 35.6001 27.5765 35.3676 27.1775C34.2955 25.3145 28.5424 18.3811 27.0039 16.2685L25.1582 18.9079L30.0354 24.7877C30.4023 25.2679 30.7549 25.7727 31.082 26.2858C31.81 27.4245 32.3873 28.3244 32.7285 29.5152C33.0703 30.6069 33.1299 31.7627 32.902 32.8817C32.3332 35.2111 29.8477 37.6778 26.6456 37.7765C25.748 37.7939 24.8562 37.6342 24.0249 37.3073C23.1935 36.9803 22.4402 36.493 21.811 35.8751C21.3105 35.4032 19.3795 33.6417 19.6269 31.0078C19.8345 28.7716 21.4726 27.4217 21.8395 27.1336L23.6197 29.3862C23.0686 29.9257 22.7374 30.6387 22.6869 31.3946C22.6044 32.8872 23.7448 33.8311 23.978 34.0149C24.4207 34.3445 24.9342 34.5744 25.4808 34.6879C26.0275 34.8013 26.5935 34.7954 27.1375 34.6706C27.8902 34.4557 28.553 34.0163 29.0307 33.4154C29.5084 32.8146 29.7765 32.0831 29.7965 31.326C29.8012 30.6827 29.62 30.0509 29.2733 29.5015L21.1541 18.971L21.5238 18.4634C23.0822 16.3233 24.6406 14.1805 26.1991 12.0349L26.9214 11.0417L27.7035 11.9937C28.1585 12.5425 28.6192 13.1187 29.0657 13.6839C31.4232 16.6636 36.0331 22.0632 38.1091 25.2459L38.1347 25.2843C39.1815 27.12 39.7367 29.1788 39.75 31.2739Z" fill="#00C191"/>
+  </svg> <span class="logo">Heatmap.com</span> 
+</section>
+
+  <button class="page_vitals_exit_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M6 6L18 18" stroke="#1A2835" stroke-width="4" stroke-linecap="round"/>
+<path d="M18 6L6 18" stroke="#1A2835" stroke-width="4" stroke-linecap="round"/>
+</svg>
+</button>
+  </header>
   <section class="page_vitals_get_started">
     <div id="page_vitals_get_started_cover_div">
       <h5 id="page_vitals_get_started_cover_heading">Initial Diagnostic</h5>
@@ -44,14 +58,10 @@ const goToSteppers = () => {
 
 <style scoped>
 
-#app {
-  /* background-image: url(../src/assets/images/bg.png) ; 
-  background-size:100% 100% ;  */
-}
 
 .page_vitals_get_started{
 width: 100vw;
-height: 100vh;
+height: 75vh;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -61,16 +71,16 @@ align-items: center;
 
 #page_vitals_get_started_cover_div{
   width: 440px; 
-  margin-top: -25px;
+  /* margin-top: -25px; */
 }
 
 #page_vitals_get_started_cover_heading{
   color: var(--Grey-White, #FFF);
 text-align: center;
-font-size: 38px;
+font-size: 34px;
 font-weight: 600;
 margin-bottom: 0px;
-margin-top: 0px;
+margin-top: 30px;
 }
 
 #page_vitals_get_started_cover_content{
@@ -143,7 +153,6 @@ line-height: 28px;
 }
 
 .mk-stepper-step--active .mk-stepper-step__label {
-  /* color: rgba(0, 0, 0, 0.87); */
   font-weight: 500;
 }
 
@@ -171,7 +180,29 @@ justify-content: center;
 align-items: center;
 gap: 8px;
 color: #F6F6F6;
-/* padding: 0px;
-    margin: 0px; */
+}
+
+.page_vitals_header{
+  background-color: #fff; 
+  padding: 0px; 
+  margin: 0px;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 111;
+  /* margin-bottom: 50px; */
+}
+
+.page_vitals_exit_button{
+  display: flex;
+  margin: 10px 18px 10px auto;
+  border-radius: var(--corner-med, 8px);
+padding: 16px 20px;
+box-shadow: unset;
+font-weight: 600;
+border: none;
+background-color: transparent;
+cursor: pointer;
 }
 </style>

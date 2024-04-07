@@ -1,4 +1,5 @@
 <template>
+  <FeedbackModal/>
   <HeaderNav /> 
   <div class="page_vitals_steppers_cover">
     <div class="page_vitals_stepper-wrapper">
@@ -37,6 +38,7 @@
   import Step2Component from '../components/Step2Component.vue';
   import Step3Component from '../components/Step3Component.vue';
   import HeaderNav from '../components/HeaderNav.vue';
+  import FeedbackModal from '../components/FeedbackModal.vue';
   import { useRouter } from 'vue-router';
   
   export default {
@@ -92,9 +94,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75%;
+    height: 75vh;
     width: 100vw;
-    position: fixed;
+    /* position: absolute; */
+
     /* z-index: -1; */
   }
   .page_vitals_stepper-wrapper {
@@ -116,7 +119,6 @@
 
   .page_vitals_title {
   color: var(--Grey-White, #FFF);
-  font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -224,10 +226,6 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1200px) {
-  body {
-    background-color: lightblue;
-  }
-}
+
   </style>
   
