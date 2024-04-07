@@ -462,7 +462,7 @@
 .page_vitals_step1_content_wrapper {
   display: flex;
   flex-direction: column;
-  height: 480px;
+  height: 430px;
 }
 
 .page_vitals_link {

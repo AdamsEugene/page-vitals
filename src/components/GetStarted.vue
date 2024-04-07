@@ -61,7 +61,7 @@ align-items: center;
 
 #page_vitals_get_started_cover_div{
   width: 440px; 
-  margin-top: 25px;
+  margin-top: -25px;
 }
 
 #page_vitals_get_started_cover_heading{

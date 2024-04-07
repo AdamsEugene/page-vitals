@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import GetStarted from './components/GetStarted.vue';
-import Steppers from './components/Steppers.vue';
-import FeedbackModal from './components/FeedbackModal.vue';
-import Success from './components/Success.vue';
+import HeaderNav from './components/HeaderNav.vue';
 </script>
 
 <template>
   <div id="app">
+    
+    <!-- <HeaderNav /> -->
     <router-view></router-view>
-    <!-- <GetStarted /> -->
     <!-- <Steppers /> -->
     <!-- <FeedbackModal/> -->
     <!-- <Success/> -->

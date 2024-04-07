@@ -100,7 +100,8 @@ text-align: center;
 font-size: 38px;
 font-weight: 600;
 margin-bottom: 10px;
-margin-top: 0px;
+/* margin-top: 0px; */
+margin-top: -35px;
 }
 
 #page_vitals_get_started_cover_content{

@@ -70,7 +70,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 480px;
+    height: 430px;
   }
   
   .page_vitals_button_wrapper {
@@ -94,7 +94,7 @@ export default {
   
   .page_vitals_heading {
     padding: 0px;
-    margin: 10px 0px 40px 0px;
+    margin: 10px 0px 20px 0px;
     color: var(--Grey-800, var(--Grey-800, #34404B));
     font-size: 22px;
     font-weight: 600;

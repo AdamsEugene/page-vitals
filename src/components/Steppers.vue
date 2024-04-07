@@ -1,4 +1,5 @@
 <template>
+  <HeaderNav /> 
   <div class="page_vitals_steppers_cover">
     <div class="page_vitals_stepper-wrapper">
       <div class="page_vitals_stepper">
@@ -21,15 +22,10 @@
                 <Step3Component v-if="currentStep === 2" />
             </div>
         </div>
-        <!-- <div class="page_vitals_controls">
-          <button id="page_vitals_button" class="page_vitals_back" @click="prevStep">Back</button>
-          <button id="page_vitals_button" @click="nextStep" :disabled="currentStep === steps.length - 1">Next</button>
-          <button id="page_vitals_button" >complete</button>
-        </div> -->
         <div class="page_vitals_controls">
     <button id="page_vitals_button" class="page_vitals_back" @click="prevStep">Back</button>
     <button v-if="currentStep !== steps.length - 1" id="page_vitals_button" @click="nextStep">Next</button>
-    <button v-else id="page_vitals_button_complete" @click="completeStep">Complete</button>
+    <button v-else id="page_vitals_button_complete" @click="completeStep">Next</button>
   </div>
       </div>
     </div>
@@ -40,6 +36,7 @@
   import Step1Component from '../components/Step1Component.vue';
   import Step2Component from '../components/Step2Component.vue';
   import Step3Component from '../components/Step3Component.vue';
+  import HeaderNav from '../components/HeaderNav.vue';
   import { useRouter } from 'vue-router';
   
   export default {
@@ -53,7 +50,8 @@
     components: {
       Step1Component,
       Step2Component,
-      Step3Component
+      Step3Component,
+      HeaderNav
     },
     methods: {
       setCurrentStep(index) {
@@ -89,11 +87,11 @@
 
 
   .page_vitals_steppers_cover {
-    background-size:100% 100% ; 
+    /* background-size:100% 100% ;  */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 80%;
     width: 100vw;
     position: fixed;
     /* z-index: -1; */
@@ -223,6 +221,12 @@
   font-weight: 600;
   line-height: 28px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    background-color: lightblue;
+  }
 }
   </style>
   
