@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <section class="page_vitals_get_started">
     <div id="page_vitals_get_started_cover_div">
@@ -21,7 +18,7 @@
         <summary class="mk-stepper-step__header"><span class="mk-stepper-step__icon"></span><span class="mk-stepper-step__label">Error Messages</span></summary>
       </details>
     </div>
-    <button id="page_vital_get_started_button">
+    <button id="page_vital_get_started_button"  @click="goToSteppers">
       Get Started
     </button>
   
@@ -34,19 +31,37 @@
   </section>
 </template>
 
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goToSteppers = () => {
+  router.push('/steppers');
+};
+
+</script>
+
 <style scoped>
+
+#app {
+  /* background-image: url(../src/assets/images/bg.png) ; 
+  background-size:100% 100% ;  */
+}
+
 .page_vitals_get_started{
 width: 100vw;
 height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
-position: absolute;
-z-index: 1;
+/* position: absolute; */
+/* z-index: 1; */
 }
 
 #page_vitals_get_started_cover_div{
   width: 440px; 
+  margin-top: 25px;
 }
 
 #page_vitals_get_started_cover_heading{

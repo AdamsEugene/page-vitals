@@ -21,11 +21,16 @@
                 <Step3Component v-if="currentStep === 2" />
             </div>
         </div>
-        <div class="page_vitals_controls">
-          <button id="page_vitals_button" class="page_vitals_back" @click="prevStep" :disabled="currentStep === 0">Back</button>
-          <!-- <button id="page_vitals_button" class="back" @click="prevStep" :disabled="currentStep === 0" v-if="showBackButton">Back</button> -->
+        <!-- <div class="page_vitals_controls">
+          <button id="page_vitals_button" class="page_vitals_back" @click="prevStep">Back</button>
           <button id="page_vitals_button" @click="nextStep" :disabled="currentStep === steps.length - 1">Next</button>
-        </div>
+          <button id="page_vitals_button" >complete</button>
+        </div> -->
+        <div class="page_vitals_controls">
+    <button id="page_vitals_button" class="page_vitals_back" @click="prevStep">Back</button>
+    <button v-if="currentStep !== steps.length - 1" id="page_vitals_button" @click="nextStep">Next</button>
+    <button v-else id="page_vitals_button_complete" @click="completeStep">Complete</button>
+  </div>
       </div>
     </div>
   </div>
@@ -35,6 +40,7 @@
   import Step1Component from '../components/Step1Component.vue';
   import Step2Component from '../components/Step2Component.vue';
   import Step3Component from '../components/Step3Component.vue';
+  import { useRouter } from 'vue-router';
   
   export default {
     data() {
@@ -65,7 +71,10 @@
           this.currentStep--;
           this.showBackButton = this.currentStep !== 0;
         }
-      }
+      },
+      completeStep() {
+        this.$router.push('/success');
+    }
     }
   };
   </script>
@@ -78,13 +87,14 @@
   border-radius: 8px;
 }
 
+
   .page_vitals_steppers_cover {
+    background-size:100% 100% ; 
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100vw;
-    /* background-color: rgba(77, 88, 97, 0.90); */
     position: fixed;
     /* z-index: -1; */
   }
@@ -200,6 +210,19 @@
   color: green;
   font-size: 14px;
   font-weight: 900;
+}
+
+#page_vitals_button_complete {
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: none;
+  background: var(--Grey-White, #FFF);
+  box-shadow: 0px 1px 2px 0px rgba(26, 40, 53, 0.09);
+  color: var(--Primary-03-Main, #00936F);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  cursor: pointer;
 }
   </style>
   

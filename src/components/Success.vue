@@ -49,6 +49,8 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
 const stars = ref([
   { id: 1, selected: false, hovered: false },
