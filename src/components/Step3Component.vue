@@ -19,8 +19,6 @@
     <div class="page_vitals_accordion-container">
       <div class="page_vitals_accordion_content_header">
         <div class="page_vitals_error_tabs_cover">
-          <!-- <span class="page_vitals_error_tab">Inbox</span>
-          <span class="page_vitals_error_tab page_vitals_archived">Archived</span> -->
           <span class="page_vitals_error_tab"
             :class="{ 'page_vitals_active_tab': activeTab === 'inbox' }"
             @click="activeTab = 'inbox'">Inbox</span>
