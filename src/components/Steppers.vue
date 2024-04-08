@@ -5,10 +5,10 @@
     <div class="page_vitals_feedback_cover" :class="{ 'page_vital_hidden': !feedbackModalVisible, 'page_vital_display': feedbackModalVisible }">
     <div class="page_vitals_stepper-wrapper">
       <div class="page_vitals_content-wrapper">
-        <div class="page_vitals_stepper-content">
-          <div class="page_vitals_stepper-pane">
+        <div class="page_vitals_feedback-content">
+          <div class="page_vitals_feedback_modal-pane">
             <div class="page_vitals_step1_content_wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" @click="hideModal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" @click="toggleFeedbackModal">
                 <path
                   stroke="black"
                   stroke-width="1"
@@ -24,7 +24,7 @@
                 <textarea rows="14" placeholder="Enter feedback"></textarea>
 
                 <div class="page_vitals_controls">
-                  <span id="page_vitals_button"  @click="hideModal">Cancel</span>
+                  <span id="page_vitals_button"  @click="toggleFeedbackModal">Cancel</span>
                   <button id="page_vitals_button" class="page_vitals_submit">
                     Submit
                   </button>
@@ -95,9 +95,6 @@
       toggleFeedbackModal() {
       this.feedbackModalVisible = !this.feedbackModalVisible;
     },
-    hideModal() {
-      this.modalVisible = true; // Set the data property to true to hide the modal
-    },
       setCurrentStep(index) {
         this.currentStep = index;
         this.showBackButton = index !== 0;
@@ -130,23 +127,16 @@
 }
 
   .page_vitals_steppers_cover {
-    /* background-color: red; */
-    /* background-size:100% 100% ;  */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 75vh;
     width: 100vw;
-    /* position: absolute; */
-
-    /* z-index: -1; */
   }
   .page_vitals_stepper-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    /* width: 100%; */
-    /* height: 100vh; */
   }
 
   .page_vitals_content-wrapper {
@@ -207,8 +197,8 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
-    /* margin-top: -40px; */
   }
+
   .page_vitals_controls {
     display: flex;
   justify-content: space-between;
@@ -268,18 +258,19 @@
 }
 
 /* feedback style */
-.page_vitals_feedback_cover{
-  background-color: green; height: 120%; position: absolute; z-index: 9999999999;
-    display: flex;
+.page_vitals_feedback_cover{ 
+  display: flex;
   align-items: center;
+  height: 120%; 
   justify-content: center;
-  /* height: 100%; */
+  position: absolute; 
+  z-index: 999;
   width: 100vw;
   background-color: rgba(77, 88, 97, 0.9);
 }
 
 .page_vitals_step1_content_wrapper {
-  height: 480px;
+  /* height: 480px; */
 }
 
 
@@ -353,6 +344,20 @@ textarea {
   line-height: 28px;
   cursor: pointer;
 }
+
+.page_vitals_feedback-content {
+  flex-grow: 1;
+  width: 750px;
+  background: #F6F6F6;
+  border-radius: 8px;
+}
+
+.page_vitals_feedback_modal-pane {
+    padding: 30px 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 70px;
+  }
 
 .page_vitals_submit {
   background-color: #008160 !important;

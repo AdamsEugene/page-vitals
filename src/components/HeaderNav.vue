@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 1111111111;
+  z-index: 111;
   /* margin-bottom: 50px; */
 }
 
