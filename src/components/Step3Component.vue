@@ -512,7 +512,6 @@
 }
 
 .page_vitals_accordion-heading {
-  /* margin-top: 10px; */
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -554,19 +553,15 @@
 
 .page_vitals_accordion_cover {
   border-bottom: 1px solid var(--Grey-200, #E6E7E8);
-  /* padding: 14px 18px; */
 }
 
 .page_vitals_raw_code {
-  /* margin-top: 16px; */
   background: var(--Grey-900, #1A2835);
-  /* padding: 16px 18px; */
   padding: 10px 18px 14px 18px;
   color: #fff;
 }
 
 .page_vitals_padding {
-  /* padding: 14px 18px;  */
   padding: 10px 18px 14px 18px;
 }
 
@@ -577,7 +572,6 @@
   font-weight: 700;
   line-height: 18px;
   display: flex;
-  /* justify-content: end; */
 }
 
 .page_vitals_translated_code_description {
@@ -619,7 +613,6 @@ margin: 0px 6px 0px 0px;
 .page_vitals_error_indicators_red{
   border-radius: 1px;
 background: var(--Error-03-Main, #FF4A3D);
-/* padding: 0px 20px; */
 height: 6px;
 flex: 1 0 0;
 align-self: stretch;

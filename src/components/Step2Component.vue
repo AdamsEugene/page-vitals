@@ -81,14 +81,12 @@
         </div>
 
         <div class="page_vitals_grid-container">
-    <!-- Repeat this div for each box -->
     <div class="page_vitals_grid-item">Largest Contentful Paint (LCP) <button class="page_vitals_metrics_numbers page_vitals_color_red">4.3 s</button> </div>
     <div class="page_vitals_grid-item">Interaction to Next Paint (INP) <button class="page_vitals_metrics_numbers page_vitals_color_orange">338 ms</button> </div>
     <div class="page_vitals_grid-item">Cumulative Layout Shift (CLS) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">0</button> </div>
     <div class="page_vitals_grid-item">First Contentful Paint (ECP) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">1.7 s</button> </div>
     <div class="page_vitals_grid-item">First Input Delay (FID) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">30 ms</button> </div>
     <div class="page_vitals_grid-item">Time to First Byte (TTFB) <button class="page_vitals_metrics_numbers page_vitals_color_lightgreen">0.5 s</button> </div>
-    <!-- Repeat as needed -->
   </div>
       </section>
     </div>
@@ -223,7 +221,6 @@ export default {
 .page_vitals_top_header_wrapper{
 display: flex;
 justify-content: space-between;
-/* background-color: red; */
 }
 
 #page_vitals_tab_button_wrapper{
@@ -271,7 +268,6 @@ border-radius: 10px 0px 0px 10px;
   color: #fff !important;
 }
 .active > .page_vitals_tab_description{
-  /* background-color: #016F52; */
   color: #fff !important;
 }
 .active > svg {
@@ -330,14 +326,12 @@ font-weight: 500;
 .page_vitals_grid-item {
   background-color: #fff;
   border: 1px solid var(--Grey-200, #E6E7E8);
-  /* box-shadow: 0px 1px 2px 0px rgba(26, 40, 53, 0.09); */
   border-radius: 8px;
   padding: 16px 10px;
   color: #34404B;
 font-size: 13px;
 font-weight: 600;
 margin-left: 6px;
-  /* height: 100px; */
 }
 
 #page_vital_copy_text{

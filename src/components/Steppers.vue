@@ -72,7 +72,6 @@
   import Step2Component from '../components/Step2Component.vue';
   import Step3Component from '../components/Step3Component.vue';
   import HeaderNav from '../components/HeaderNav.vue';
-  import FeedbackModal from '../components/FeedbackModal.vue';
   import { useRouter } from 'vue-router';
   
   export default {
@@ -89,7 +88,6 @@
       Step2Component,
       Step3Component,
       HeaderNav,
-      FeedbackModal
     },
     methods: {
       toggleFeedbackModal() {
@@ -268,11 +266,6 @@
   width: 100vw;
   background-color: rgba(77, 88, 97, 0.9);
 }
-
-.page_vitals_step1_content_wrapper {
-  /* height: 480px; */
-}
-
 
 .page_vitals_stepper-pane {
   padding: 30px 35px;

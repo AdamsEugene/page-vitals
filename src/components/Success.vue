@@ -3,10 +3,6 @@
   <section class="page_vitals_get_started">
     <div id="page_vitals_get_started_cover_div">
       <h5 id="page_vitals_get_started_cover_heading">Initial Diagnostic: <br> Complete! </h5>
-      <!-- <p id="page_vitals_get_started_cover_content">
-        While waiting for UX observations from your heatmap data, check out these initial insights to get started optimizing your site
-      </p> -->
-  
     <div id="page_vitals_stepper_cover">
     <div id="page_vitails_mk-stepper">
       <details class="mk-stepper-step">
@@ -35,7 +31,7 @@
       @mouseleave="resetStars"
       :class="{ 'selected': star.selected, 'hovered': star.hovered }"
     >
-      &#9733; <!-- Filled star unicode character -->
+      &#9733;
     </span>
   </div>
     </div>
@@ -84,13 +80,10 @@ height: 75vh;
 display: flex;
 justify-content: center;
 align-items: center;
-/* position: absolute;
-z-index: 1; */
 }
 
 #page_vitals_get_started_cover_div{
   width: 440px; 
-  /* margin-top: -5%; */
 }
 
 #page_vitals_get_started_cover_heading{
@@ -100,7 +93,6 @@ font-size: 34px;
 font-weight: 600;
 margin-bottom: 10px;
 margin-top: 0px;
-/* margin-top: -35px; */
 }
 
 #page_vitals_get_started_cover_content{
@@ -147,7 +139,6 @@ line-height: 28px;
   padding-right: 48px;
   padding-bottom: 16px;
   padding-left: 24px;
-  /* color: rgba(0, 0, 0, 0.87); */
   outline: none;
   cursor: pointer;
 }
@@ -175,7 +166,6 @@ line-height: 28px;
 }
 
 .mk-stepper-step--active .mk-stepper-step__label {
-  /* color: rgba(0, 0, 0, 0.87); */
   font-weight: 500;
 }
 

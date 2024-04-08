@@ -1,10 +1,3 @@
-// import { createApp } from 'vue'
-// import './style.css'
-// import App from './App.vue'
-
-// createApp(App).mount('#app')
-// main.js
-
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
@@ -28,6 +21,5 @@ const router = createRouter({
 
 const app = createApp(App);
 
-// Mount the app and router
 app.use(router);
 app.mount('#app');
