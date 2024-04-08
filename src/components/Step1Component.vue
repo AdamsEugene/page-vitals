@@ -1,6 +1,17 @@
 <template>
     <div class="page_vitals_step1_content_wrapper">
-      <a class="page_vitals_link">www.cadenlane.org</a>
+      <a class="page_vitals_link">www.cadenlane.org <svg style="margin-left: 6px; width: 14px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
+<g clip-path="url(#clip0_1527_1282)">
+<path d="M7.00033 12.8333C10.222 12.8333 12.8337 10.2217 12.8337 7C12.8337 3.77834 10.222 1.16667 7.00033 1.16667C3.77866 1.16667 1.16699 3.77834 1.16699 7C1.16699 10.2217 3.77866 12.8333 7.00033 12.8333Z" fill="#00936F" stroke="#00936F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 9.33333V7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 4.66667H7.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1527_1282">
+<rect width="14" height="14" fill="white"/>
+</clipPath>
+</defs>
+</svg></a>
       <h2 class="page_vitals_heading">Copywriting Analysis</h2>
       <div>
         <p class="page_vitals_content_ul_heading">Copywriting angles you should emphasize on your site:</p>
@@ -94,6 +105,8 @@ export default {
     font-family: Montserrat;
     font-size: 13px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
   }
   
   .page_vitals_heading {
@@ -134,5 +147,6 @@ svg {
   height: 24px; 
   cursor: pointer;
 }
+
   </style>
   
