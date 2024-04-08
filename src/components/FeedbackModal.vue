@@ -52,7 +52,8 @@ export default {
     
     <style scoped>
 .page_vitals_stepper-content {
-  z-index: 999;
+  position: absolute;
+  z-index: 9999999;
   flex-grow: 1;
   width: 700px;
   background: #f6f6f6;
