@@ -3,19 +3,26 @@
     <!-- ################## Header Wrapper ###################### -->
     <section>
       <div class="page_vitals_top_header_wrapper">
-        <div>
-          <a class="page_vitals_link">www.cadenlane.org <svg style="margin-left: 6px; width: 14px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
-<g clip-path="url(#clip0_1527_1282)">
-<path d="M7.00033 12.8333C10.222 12.8333 12.8337 10.2217 12.8337 7C12.8337 3.77834 10.222 1.16667 7.00033 1.16667C3.77866 1.16667 1.16699 3.77834 1.16699 7C1.16699 10.2217 3.77866 12.8333 7.00033 12.8333Z" fill="#00936F" stroke="#00936F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7 9.33333V7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7 4.66667H7.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_1527_1282">
-<rect width="14" height="14" fill="white"/>
-</clipPath>
-</defs>
-</svg></a>
+        <div style="margin-top: 5px;">
+          <div class="tooltip">
+        <a class="page_vitals_link">www.cadenlane.org 
+         <span tooltip="Insights for other pages in your site will become available on the dashboard">
+
+           <svg style="margin-left: 6px; width: 14px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
+            <g clip-path="url(#clip0_1527_1282)">
+            <path d="M7.00033 12.8333C10.222 12.8333 12.8337 10.2217 12.8337 7C12.8337 3.77834 10.222 1.16667 7.00033 1.16667C3.77866 1.16667 1.16699 3.77834 1.16699 7C1.16699 10.2217 3.77866 12.8333 7.00033 12.8333Z" fill="#00936F" stroke="#00936F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 9.33333V7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 4.66667H7.00667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1527_1282">
+            <rect width="14" height="14" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+        </span> 
+</a>
+      </div>
           <h2 class="page_vitals_heading">Site Speed</h2>
         </div>
         <div id="page_vitals_tab_button_wrapper">
@@ -225,7 +232,7 @@ export default {
 
 .page_vitals_heading {
   padding: 0px;
-  margin: 10px 0px 40px 0px;
+  margin: 5px 0px 40px 0px;
   color: var(--Grey-800, var(--Grey-800, #34404B));
   font-size: 22px;
   font-weight: 600;
@@ -372,5 +379,93 @@ color: #CE7422;
 .page_vitals_color_lightgreen{
   background-color: #D7FCD2;
   color: #12904E;
+}
+
+
+
+/* TOOLTIP STYLES */
+[tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; 
+  font-size: .9em;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent;
+  z-index: 1001;
+}
+[tooltip]::after {
+  content: attr(tooltip); 
+  text-align: center;
+  z-index: 1000; 
+display: flex;
+width: 211px;
+padding: var(--corner-med, 8px);
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 4px;
+border-radius: 10px;
+background:  #00936F;
+color: var(--Grey-White, #FFF);
+text-align: center;
+font-family: Montserrat;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+cursor: pointer;
+}
+
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 10px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */ 
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
 }
 </style>

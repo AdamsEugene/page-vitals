@@ -59,7 +59,7 @@
         </div>
         <div class="page_vitals_controls">
     <button id="page_vitals_button" class="page_vitals_back" @click="prevStep">Back</button>
-    <button v-if="currentStep !== steps.length - 1" id="page_vitals_button" @click="nextStep">Next</button>
+    <button v-if="currentStep !== steps.length - 1" id="page_vitals_button" class="page_vitals_next" @click="nextStep">Next</button>
     <button v-else id="page_vitals_button_complete" @click="completeStep">Next</button>
   </div>
       </div>
@@ -153,7 +153,7 @@
   font-weight: 600;
   line-height: normal;
   margin-bottom: 20px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
   .page_vitals_stepper-line {
@@ -231,6 +231,9 @@
     background-color: #004F3B !important;
     color: var(--Grey-White, #FFF) !important;
   }
+  .page_vitals_next{
+    color:  #004F3B !important;
+  }
 
 .page_vitals_checkmark {
   position: absolute;
@@ -243,13 +246,13 @@
 }
 
 #page_vitals_button_complete {
-  padding: 12px 32px;
+  padding: 10px 32px;
   border-radius: 10px;
   border: none;
   background: var(--Grey-White, #FFF);
   box-shadow: 0px 1px 2px 0px rgba(26, 40, 53, 0.09);
   color: var(--Primary-03-Main, #00936F);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 28px;
   cursor: pointer;
