@@ -65,13 +65,10 @@ height: 75vh;
 display: flex;
 justify-content: center;
 align-items: center;
-/* position: absolute; */
-/* z-index: 1; */
 }
 
 #page_vitals_get_started_cover_div{
   width: 440px; 
-  /* margin-top: -25px; */
 }
 
 #page_vitals_get_started_cover_heading{
@@ -127,7 +124,6 @@ line-height: 28px;
   padding-right: 48px;
   padding-bottom: 16px;
   padding-left: 24px;
-  /* color: rgba(0, 0, 0, 0.87); */
   outline: none;
   cursor: pointer;
 }
@@ -191,7 +187,6 @@ color: #F6F6F6;
   align-items: center;
   position: relative;
   z-index: 111;
-  /* margin-bottom: 50px; */
 }
 
 .page_vitals_exit_button{
