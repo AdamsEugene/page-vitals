@@ -5,13 +5,15 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // Import your components
 import GetStarted from './components/GetStarted.vue';
-import Steppers from './components/Steppers.vue';
-import Success from './components/Success.vue';
+import Steppers from "./components/SteppersComponent.vue";
+import SuccessComponent from './components/SuccessComponent.vue';
+import GetStartedBanner from './components/GetStartedBanner.vue';
 
 const routes = [
-  { path: '/', component: GetStarted },
-  { path: '/steppers', component: Steppers },
-  { path: '/success', component: Success }
+  { path: "/", component: GetStarted },
+  { path: "/steppers", component: Steppers },
+  { path: "/success", component: SuccessComponent },
+  { path: "/banner", component: GetStartedBanner },
 ];
 
 const router = createRouter({
