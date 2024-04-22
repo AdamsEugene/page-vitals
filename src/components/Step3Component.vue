@@ -102,8 +102,8 @@
         <span class="paege_vitals_error_text">5 Errors</span>
       </div>
 
-      <div class="page_vitals_inbox_content" v-show="activeTab === 'inbox'">
-        <div ref="inboxContent">
+      <div class="page_vitals_inbox_content" v-show="activeTab === 'inbox'" ref="inboxContent">
+        <div id="element-to-convert">
           <!-- Accordion 1 -->
           <div class="page_vitals_accordion_cover">
             <input
@@ -1367,6 +1367,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import jsPDF from 'jspdf';
+import html2pdf from 'html2pdf.js';
 
 export default defineComponent({
   data() {
@@ -1378,69 +1379,35 @@ export default defineComponent({
   },
   methods: {
     generatePDF() {
-      this.$nextTick(() => {
-        // Hiding some elements before generating PDF
-        const elementsToHide = document.querySelectorAll('.page_vitals_accordion-heading');
-        elementsToHide.forEach((element) => {
-          element.style.display = 'none';
-        });
+  // Update accordion styles before generating PDF
+  const accordionContents = document.querySelectorAll('.page_vitals_accordion-content');
+  accordionContents.forEach((content) => {
+    content.style.maxHeight = 'unset';
+  });
 
-        // Creating a new PDF document
-        const doc = new jsPDF();
-        const inboxText = this.$refs.inboxContent.innerText.trim();
-        const maxWidth = 180;
-        const maxHeight = 750;
-        const addTextWithPagination = (text, x, y) => {
-          let remainingText = text;
-          let yPosition = y;
-          let nextPage = false;
-
-          while (remainingText.length > 0) {
-            const lines = doc.splitTextToSize(remainingText, maxWidth);
-            const lineHeight = doc.getLineHeight();
-            const spaceLeft = maxHeight - yPosition;
-            const linesThatFit = Math.floor(spaceLeft / lineHeight);
-
-            if (lines.length <= linesThatFit) {
-              doc.text(lines, x, yPosition);
-              yPosition += lines.length * lineHeight;
-              remainingText = '';
-            } else {
-              nextPage = true;
-              const linesToAdd = lines.slice(0, linesThatFit);
-              doc.text(linesToAdd, x, yPosition);
-              remainingText = lines.slice(linesThatFit).join('\n');
-            }
-
-            if (nextPage || remainingText.length > 0) {
-              doc.addPage();
-              yPosition = 10;
-              nextPage = false;
-            }
-          }
-        };
-
-        doc.setFontSize(12); 
-        addTextWithPagination(inboxText, 10, 10);
-          // Adding address text to the last page
-          const pageCount = doc.internal.getNumberOfPages();
-        if (pageCount > 0) {
-          doc.setPage(pageCount);
-          doc.setFontSize(10);
-          doc.text(this.addressText, 10, 280);
-        }
-
-        // Restoring visibility of hidden elements after generating PDF
-        elementsToHide.forEach((element) => {
-          element.style.display = 'flex';
-        });
-
-        doc.save('error_messages.pdf');
-      });
+  html2pdf(document.getElementById('element-to-convert'), {
+    margin: 0.3,
+    filename: 'Heatmap.pdf',
+    image: {
+      type: 'jpeg',
+      quality: 0.98
     },
-  
-
-
+    html2canvas: {
+      dpi: 192,
+      letterRendering: true
+    },
+    jsPDF: {
+      unit: 'in',
+      format: 'a4',
+      orientation: 'portrait'
+    }
+  }).then(() => {
+    // Reset accordion styles after PDF generation
+    accordionContents.forEach((content) => {
+      content.style.maxHeight = '0';
+    });
+  });
+}
 
     },
 });
