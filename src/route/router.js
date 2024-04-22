@@ -4,6 +4,7 @@ import GetStarted from "./components/GetStarted.vue";
 import Steppers from "./components/Steppers.vue";
 import Success from "./components/Success.vue";
 import GetStartedBanner from "./components/GetStartedBanner.vue";
+// import PdfTemplate from "./components/PdfTemplate.vue";
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     name: "GetStartedBanner",
     component: GetStartedBanner,
   },
+  // {
+  //   path: "/pdf",
+  //   name: "PdfTemplate",
+  //   component: PdfTemplate,
+  // },
 ];
 
 const router = createRouter({

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "apexcharts": "^3.48.0",
+    "jspdf": "^2.5.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "vue3-apexcharts": "^1.5.2"
