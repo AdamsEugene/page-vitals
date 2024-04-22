@@ -102,13 +102,27 @@
         <span class="paege_vitals_error_text">5 Errors</span>
       </div>
 
-      <div class="page_vitals_inbox_content" v-show="activeTab === 'inbox'" ref="inboxContent">
-        <div id="element-to-convert">.
+      <div
+        class="page_vitals_inbox_content"
+        v-show="activeTab === 'inbox'"
+        ref="inboxContent"
+      >
+        <div id="element-to-convert">
+          .
           <div>
-            <div style="display: block; text-align: center; margin: 0 auto;">
-
-              <svg class="hidden-svg" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34" fill="none" >
-              <path d="M26.75 20.2739V20.359C26.7394 22.1246 26.3522 23.8692 25.6125 25.4842C23.599 29.8468 18.6877 33.0048 13.6683 33.1667C13.546 33.1667 13.4124 33.1667 13.2759 33.1667C11.9408 33.1629 10.6143 32.9612 9.34282 32.5685C3.53568 30.7796 1.13547 25.4705 1.13547 25.4705C0.797123 24.7447 0.551689 23.9818 0.404604 23.1987C-0.448551 18.5947 2.48061 14.8057 3.06644 14.0484C3.75982 13.1542 4.56397 12.3452 5.46096 11.6394L7.07342 13.8838L5.75104 15.2556C5.37565 15.7056 3.00672 18.6386 3.76034 22.4963C4.65047 27.1058 9.22053 29.0813 9.97984 29.3309C10.1732 29.3968 10.378 29.4599 10.378 29.4599C11.4068 29.7768 12.4834 29.9252 13.5631 29.8989C17.3369 29.7782 21.0253 27.4131 22.5326 24.1371C23.0838 22.9073 23.3739 21.5835 23.3857 20.2437C23.4151 19.2872 23.2688 18.3332 22.9535 17.4259C22.7961 16.9942 22.6001 16.5765 22.3676 16.1775C21.2955 14.3145 15.5424 7.38113 14.0039 5.26847L12.1582 7.90793L17.0354 13.7877C17.4023 14.2679 17.7549 14.7727 18.082 15.2858C18.81 16.4245 19.3873 17.3244 19.7285 18.5152C20.0703 19.6069 20.1299 20.7627 19.902 21.8817C19.3332 24.2111 16.8477 26.6778 13.6456 26.7765C12.748 26.7939 11.8562 26.6342 11.0249 26.3073C10.1935 25.9803 9.44019 25.493 8.81101 24.8751C8.3105 24.4032 6.37953 22.6417 6.62694 20.0078C6.83454 17.7716 8.4726 16.4217 8.83945 16.1336L10.6197 18.3862C10.0686 18.9257 9.73743 19.6387 9.68692 20.3946C9.60445 21.8872 10.7448 22.8311 10.978 23.0149C11.4207 23.3445 11.9342 23.5744 12.4808 23.6879C13.0275 23.8013 13.5935 23.7954 14.1375 23.6706C14.8902 23.4557 15.553 23.0163 16.0307 22.4154C16.5084 21.8146 16.7765 21.0831 16.7965 20.326C16.8012 19.6827 16.62 19.0509 16.2733 18.5015L8.15409 7.97103L8.52379 7.46345C10.0822 5.32334 11.6406 3.18049 13.1991 1.0349L13.9214 0.0416679L14.7035 0.993741C15.1585 1.54249 15.6192 2.11867 16.0657 2.68388C18.4232 5.66356 23.0331 11.0632 25.1091 14.2459L25.1347 14.2843C26.1815 16.12 26.7367 18.1788 26.75 20.2739Z" fill="#00C191"/>
+            <div style="display: block; text-align: center; margin: 0 auto">
+              <svg
+                class="hidden-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="27"
+                height="34"
+                viewBox="0 0 27 34"
+                fill="none"
+              >
+                <path
+                  d="M26.75 20.2739V20.359C26.7394 22.1246 26.3522 23.8692 25.6125 25.4842C23.599 29.8468 18.6877 33.0048 13.6683 33.1667C13.546 33.1667 13.4124 33.1667 13.2759 33.1667C11.9408 33.1629 10.6143 32.9612 9.34282 32.5685C3.53568 30.7796 1.13547 25.4705 1.13547 25.4705C0.797123 24.7447 0.551689 23.9818 0.404604 23.1987C-0.448551 18.5947 2.48061 14.8057 3.06644 14.0484C3.75982 13.1542 4.56397 12.3452 5.46096 11.6394L7.07342 13.8838L5.75104 15.2556C5.37565 15.7056 3.00672 18.6386 3.76034 22.4963C4.65047 27.1058 9.22053 29.0813 9.97984 29.3309C10.1732 29.3968 10.378 29.4599 10.378 29.4599C11.4068 29.7768 12.4834 29.9252 13.5631 29.8989C17.3369 29.7782 21.0253 27.4131 22.5326 24.1371C23.0838 22.9073 23.3739 21.5835 23.3857 20.2437C23.4151 19.2872 23.2688 18.3332 22.9535 17.4259C22.7961 16.9942 22.6001 16.5765 22.3676 16.1775C21.2955 14.3145 15.5424 7.38113 14.0039 5.26847L12.1582 7.90793L17.0354 13.7877C17.4023 14.2679 17.7549 14.7727 18.082 15.2858C18.81 16.4245 19.3873 17.3244 19.7285 18.5152C20.0703 19.6069 20.1299 20.7627 19.902 21.8817C19.3332 24.2111 16.8477 26.6778 13.6456 26.7765C12.748 26.7939 11.8562 26.6342 11.0249 26.3073C10.1935 25.9803 9.44019 25.493 8.81101 24.8751C8.3105 24.4032 6.37953 22.6417 6.62694 20.0078C6.83454 17.7716 8.4726 16.4217 8.83945 16.1336L10.6197 18.3862C10.0686 18.9257 9.73743 19.6387 9.68692 20.3946C9.60445 21.8872 10.7448 22.8311 10.978 23.0149C11.4207 23.3445 11.9342 23.5744 12.4808 23.6879C13.0275 23.8013 13.5935 23.7954 14.1375 23.6706C14.8902 23.4557 15.553 23.0163 16.0307 22.4154C16.5084 21.8146 16.7765 21.0831 16.7965 20.326C16.8012 19.6827 16.62 19.0509 16.2733 18.5015L8.15409 7.97103L8.52379 7.46345C10.0822 5.32334 11.6406 3.18049 13.1991 1.0349L13.9214 0.0416679L14.7035 0.993741C15.1585 1.54249 15.6192 2.11867 16.0657 2.68388C18.4232 5.66356 23.0331 11.0632 25.1091 14.2459L25.1347 14.2843C26.1815 16.12 26.7367 18.1788 26.75 20.2739Z"
+                  fill="#00C191"
+                />
               </svg>
             </div>
           </div>
@@ -129,7 +143,7 @@
                   <span class="page_vitals_error_indicators_red"></span>
                   <span class="page_vitals_error_indicators_red"></span>
                 </div>
-  
+
                 <div>
                   <span>(1)</span>
                 </div>
@@ -193,7 +207,7 @@
                 <p>Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</p>
                 <p>at Tx60AxaFlo-Li0S769Y... .myshopify.com:3:111</p>
                 <p>at Tx60AxFlo-Li0S769Y... .myshopify.com:92:3</p>
-  
+
                 <div class="page_vitals_copy_svg">
                   <div></div>
                   <svg
@@ -227,7 +241,7 @@
                   </svg>
                 </div>
               </div>
-  
+
               <div class="page_vitals_padding">
                 <div>
                   <p class="page_vitals_translated_code">
@@ -290,7 +304,7 @@
               </div>
             </div>
           </div>
-  
+
           <!-- Accordion 2 -->
           <div class="page_vitals_accordion_cover">
             <input
@@ -308,7 +322,7 @@
                   <span class="page_vitals_error_indicators_red"></span>
                   <span class="page_vitals_error_indicators_red"></span>
                 </div>
-  
+
                 <div>
                   <span>(3)</span>
                 </div>
@@ -372,7 +386,7 @@
                 <p>Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</p>
                 <p>at Tx60AxaFlo-Li0S769Y... .myshopify.com:3:111</p>
                 <p>at Tx60AxFlo-Li0S769Y... .myshopify.com:92:3</p>
-  
+
                 <div class="page_vitals_copy_svg">
                   <div></div>
                   <svg
@@ -406,7 +420,7 @@
                   </svg>
                 </div>
               </div>
-  
+
               <div class="page_vitals_padding">
                 <div>
                   <p class="page_vitals_translated_code">
@@ -469,7 +483,7 @@
               </div>
             </div>
           </div>
-  
+
           <!-- Accordion 3 -->
           <div class="page_vitals_accordion_cover">
             <input
@@ -487,7 +501,7 @@
                   <span class="page_vitals_error_indicators_red"></span>
                   <span class="page_vitals_error_indicators_grey"></span>
                 </div>
-  
+
                 <div>
                   <span>(1)</span>
                 </div>
@@ -551,7 +565,7 @@
                 <p>Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</p>
                 <p>at Tx60AxaFlo-Li0S769Y... .myshopify.com:3:111</p>
                 <p>at Tx60AxFlo-Li0S769Y... .myshopify.com:92:3</p>
-  
+
                 <div class="page_vitals_copy_svg">
                   <div></div>
                   <svg
@@ -585,7 +599,7 @@
                   </svg>
                 </div>
               </div>
-  
+
               <div class="page_vitals_padding">
                 <div>
                   <p class="page_vitals_translated_code">
@@ -648,7 +662,7 @@
               </div>
             </div>
           </div>
-  
+
           <!-- Accordion 4 -->
           <div class="page_vitals_accordion_cover">
             <input
@@ -666,7 +680,7 @@
                   <span class="page_vitals_error_indicators_grey"></span>
                   <span class="page_vitals_error_indicators_grey"></span>
                 </div>
-  
+
                 <div>
                   <span>(1)</span>
                 </div>
@@ -730,7 +744,7 @@
                 <p>Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</p>
                 <p>at Tx60AxaFlo-Li0S769Y... .myshopify.com:3:111</p>
                 <p>at Tx60AxFlo-Li0S769Y... .myshopify.com:92:3</p>
-  
+
                 <div class="page_vitals_copy_svg">
                   <div></div>
                   <svg
@@ -764,7 +778,7 @@
                   </svg>
                 </div>
               </div>
-  
+
               <div class="page_vitals_padding">
                 <div>
                   <p class="page_vitals_translated_code">
@@ -827,7 +841,7 @@
               </div>
             </div>
           </div>
-  
+
           <!-- Accordion 5 -->
           <div class="page_vitals_accordion_cover">
             <input
@@ -845,7 +859,7 @@
                   <span class="page_vitals_error_indicators_grey"></span>
                   <span class="page_vitals_error_indicators_grey"></span>
                 </div>
-  
+
                 <div>
                   <span>(1)</span>
                 </div>
@@ -879,8 +893,8 @@
                   />
                 </svg>
                 <span class="page_vitals_ellipsis_text"
-                  >In a sandboxed environment, AddEventListener may not be behave
-                  as ...
+                  >In a sandboxed environment, AddEventListener may not be
+                  behave as ...
                 </span>
               </span>
               <span class="page_vitals_arrow">
@@ -909,7 +923,7 @@
                 <p>Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</p>
                 <p>at Tx60AxaFlo-Li0S769Y... .myshopify.com:3:111</p>
                 <p>at Tx60AxFlo-Li0S769Y... .myshopify.com:92:3</p>
-  
+
                 <div class="page_vitals_copy_svg">
                   <div></div>
                   <svg
@@ -943,7 +957,7 @@
                   </svg>
                 </div>
               </div>
-  
+
               <div class="page_vitals_padding">
                 <div>
                   <p class="page_vitals_translated_code">
@@ -1008,8 +1022,8 @@
           </div>
 
           <div class="hidden-address">
-            <p style="text-align: center; font-size: 13px; margin-top: 50px;">
-              <a href="heatmap.com">Heatmap.com</a> <br>
+            <p style="text-align: center; font-size: 13px; margin-top: 50px">
+              <a href="heatmap.com">Heatmap.com</a> <br />
               7077 Macbeth Way Eldersberg, Delaware 21784
             </p>
           </div>
@@ -1381,8 +1395,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import jsPDF from 'jspdf';
-import html2pdf from 'html2pdf.js';
+import jsPDF from "jspdf";
+import html2pdf from "html2pdf.js";
 
 export default defineComponent({
   data() {
@@ -1394,45 +1408,46 @@ export default defineComponent({
   },
   methods: {
     generatePDF() {
-      const hiddenSvg = document.querySelector('.hidden-svg');
-  hiddenSvg.style.display = 'inline'; 
-  const hiddenAddress = document.querySelector('.hidden-address');
-  hiddenAddress.style.display = 'block';
-  // Update accordion styles before generating PDF
-  const accordionContents = document.querySelectorAll('.page_vitals_accordion-content');
-  accordionContents.forEach((content) => {
-    content.style.maxHeight = 'unset';
-  });
-
-  html2pdf(document.getElementById('element-to-convert'), {
-    margin: 0.3,
-    filename: 'Heatmap.pdf',
-    image: {
-      type: 'jpeg',
-      quality: 0.98
-    },
-    html2canvas: {
-      dpi: 192,
-      letterRendering: true
-    },
-    jsPDF: {
-      unit: 'in',
-      format: 'a4',
-      orientation: 'portrait'
-    }
-  }).then(() => {
-    hiddenSvg.style.display = 'none';
-    hiddenAddress.style.display = 'none';
-    setTimeout(() => {
+      const hiddenSvg = document.querySelector(".hidden-svg");
+      hiddenSvg.style.display = "inline";
+      const hiddenAddress = document.querySelector(".hidden-address");
+      hiddenAddress.style.display = "block";
+      // Update accordion styles before generating PDF
+      const accordionContents = document.querySelectorAll(
+        ".page_vitals_accordion-content"
+      );
       accordionContents.forEach((content) => {
-        content.style.maxHeight = '0';
+        content.style.maxHeight = "unset";
       });
-    }, 0.00001);
-  });
-}
 
-
+      html2pdf(document.getElementById("element-to-convert"), {
+        margin: 0.3,
+        filename: "Heatmap.pdf",
+        image: {
+          type: "jpeg",
+          quality: 0.98,
+        },
+        html2canvas: {
+          dpi: 600,
+          letterRendering: true,
+          scale: 3,
+        },
+        jsPDF: {
+          unit: "in",
+          format: "a4",
+          orientation: "portrait",
+        },
+      }).then(() => {
+        hiddenSvg.style.display = "none";
+        hiddenAddress.style.display = "none";
+        setTimeout(() => {
+          accordionContents.forEach((content) => {
+            content.style.maxHeight = "0";
+          });
+        }, 0.01);
+      });
     },
+  },
 });
 </script>
 
@@ -1735,11 +1750,12 @@ export default defineComponent({
   animation: tooltips-vert 300ms ease-out forwards;
 }
 
-.page_vitals_error_text_title{
+.page_vitals_error_text_title {
   font-weight: 800;
 }
 
-.hidden-svg, .hidden-address {
+.hidden-svg,
+.hidden-address {
   display: none;
 }
 </style>
