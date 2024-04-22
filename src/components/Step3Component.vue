@@ -1378,69 +1378,67 @@ export default defineComponent({
   },
   methods: {
     generatePDF() {
-  this.$nextTick(() => {
-    // Hiding some elements before generating PDF
-    const elementsToHide = document.querySelectorAll('.page_vitals_accordion-heading');
-    elementsToHide.forEach((element) => {
-      element.style.display = 'none';
-    });
+      this.$nextTick(() => {
+        // Hiding some elements before generating PDF
+        const elementsToHide = document.querySelectorAll('.page_vitals_accordion-heading');
+        elementsToHide.forEach((element) => {
+          element.style.display = 'none';
+        });
 
-    const elementsToBold = document.querySelectorAll('.page_vitals_error_text_title');
-    elementsToBold.forEach((element) => {
-      element.style.textDecoration = 'underline'; // Apply bold style
-    });
-    
+        // Creating a new PDF document
+        const doc = new jsPDF();
+        const inboxText = this.$refs.inboxContent.innerText.trim();
+        const maxWidth = 180;
+        const maxHeight = 750;
+        const addTextWithPagination = (text, x, y) => {
+          let remainingText = text;
+          let yPosition = y;
+          let nextPage = false;
 
-    // Creating a new PDF document
-    const doc = new jsPDF();
-    const inboxText = this.$refs.inboxContent.innerText.trim();
-    const maxWidth = 180;
-    const maxHeight = 820;
+          while (remainingText.length > 0) {
+            const lines = doc.splitTextToSize(remainingText, maxWidth);
+            const lineHeight = doc.getLineHeight();
+            const spaceLeft = maxHeight - yPosition;
+            const linesThatFit = Math.floor(spaceLeft / lineHeight);
 
-       // Select and add style to elements with class '.page_vitals_error_text_title'
-    
+            if (lines.length <= linesThatFit) {
+              doc.text(lines, x, yPosition);
+              yPosition += lines.length * lineHeight;
+              remainingText = '';
+            } else {
+              nextPage = true;
+              const linesToAdd = lines.slice(0, linesThatFit);
+              doc.text(linesToAdd, x, yPosition);
+              remainingText = lines.slice(linesThatFit).join('\n');
+            }
 
-    const addTextWithPagination = (text, x, y) => {
-      let remainingText = text;
-      let yPosition = y;
-      let nextPage = false;
+            if (nextPage || remainingText.length > 0) {
+              doc.addPage();
+              yPosition = 10;
+              nextPage = false;
+            }
+          }
+        };
 
-      while (remainingText.length > 0) {
-        const lines = doc.splitTextToSize(remainingText, maxWidth);
-        const lineHeight = doc.getLineHeight();
-        const spaceLeft = maxHeight - yPosition;
-        const linesThatFit = Math.floor(spaceLeft / lineHeight);
-
-        if (lines.length <= linesThatFit) {
-          doc.text(lines, x, yPosition);
-          yPosition += lines.length * lineHeight;
-          remainingText = '';
-        } else {
-          nextPage = true;
-          const linesToAdd = lines.slice(0, linesThatFit);
-          doc.text(linesToAdd, x, yPosition);
-          remainingText = lines.slice(linesThatFit).join('\n');
+        doc.setFontSize(12); 
+        addTextWithPagination(inboxText, 10, 10);
+          // Adding address text to the last page
+          const pageCount = doc.internal.getNumberOfPages();
+        if (pageCount > 0) {
+          doc.setPage(pageCount);
+          doc.setFontSize(10);
+          doc.text(this.addressText, 10, 280);
         }
 
-        if (nextPage || remainingText.length > 0) {
-          doc.addPage();
-          yPosition = 10;
-          nextPage = false;
-        }
-      }
-    };
+        // Restoring visibility of hidden elements after generating PDF
+        elementsToHide.forEach((element) => {
+          element.style.display = 'flex';
+        });
 
-    doc.setFontSize(12); 
-    addTextWithPagination(inboxText, 10, 10);
-
-    // Restoring visibility of hidden elements after generating PDF
-    elementsToHide.forEach((element) => {
-      element.style.display = 'flex';
-    });
-
-    doc.save('error_messages.pdf');
-  });
-},
+        doc.save('error_messages.pdf');
+      });
+    },
+  
 
 
 
