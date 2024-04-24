@@ -206,13 +206,13 @@
           <span
             id="page_vital_copy_text"
             class="page_vitals_tab1_content_header"
-            >Copy All</span
+            @click="copyMobile" >Copy All</span
           >
         </div>
       </div>
 
       <!-- recommendations list -->
-      <div>
+      <div class="mobile_recommendation_container">
         <div
           class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper"
         >
@@ -385,18 +385,18 @@
           <span
             id="page_vital_copy_text"
             class="page_vitals_tab1_content_header"
-            >Copy All</span
+            @click="copyDesktop">Copy All</span
           >
         </div>
       </div>
 
       <!-- recommendations list -->
-      <div>
+      <div class="desktop_recommendation_container">
         <div
           class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin"
         >
           <p class="page_vitals_content_ul_heading">
-            Eliminate render-blocking resources.
+             render-blocking resources.
           </p>
         </div>
         <div
@@ -488,6 +488,36 @@ export default defineComponent({
   methods: {
     changeTab(tab) {
       this.activeTab = tab;
+    },
+    copyMobile() {
+      const container = document.querySelector('.mobile_recommendation_container');
+      const texts = Array.from(container.querySelectorAll('.page_vitals_content_ul_heading'))
+        .map(item => item.textContent.trim())
+        .join('\n');
+
+      const textarea = document.createElement('textarea');
+      textarea.value = texts;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+
+      alert('Text copied to clipboard!');
+    },
+    copyDesktop() {
+      const container = document.querySelector('.desktop_recommendation_container');
+      const texts = Array.from(container.querySelectorAll('.page_vitals_content_ul_heading'))
+        .map(item => item.textContent.trim())
+        .join('\n');
+
+      const textarea = document.createElement('textarea');
+      textarea.value = texts;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+
+      alert('Text copied to clipboard!');
     },
   },
 });
