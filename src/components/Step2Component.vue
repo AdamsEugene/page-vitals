@@ -217,7 +217,7 @@
           class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper"
         >
           <p class="page_vitals_content_ul_heading">
-            Compress and resize images to reduce their file size without
+            Mobile Compress and resize images to reduce their file size without
             sacrificing quality.
           </p>
         </div>
@@ -225,7 +225,7 @@
           class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin"
         >
           <p class="page_vitals_content_ul_heading">
-            Reduce unused JavaScript and defer loading scripts until they are
+            mobile Reduce unused JavaScript and defer loading scripts until they are
             required to decrease bytes consumed by network activity.
           </p>
         </div>
@@ -233,7 +233,7 @@
           class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin"
         >
           <p class="page_vitals_content_ul_heading">
-            Eliminate render-blocking resources.
+            mobile Eliminate render-blocking resources.
           </p>
         </div>
       </div>
@@ -396,14 +396,14 @@
           class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin"
         >
           <p class="page_vitals_content_ul_heading">
-             render-blocking resources.
+             Desktop render-blocking resources.
           </p>
         </div>
         <div
           class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper"
         >
           <p class="page_vitals_content_ul_heading">
-            Compress and resize images to reduce their file size without
+            Desktop Compress and resize images to reduce their file size without
             sacrificing quality.
           </p>
         </div>
@@ -411,7 +411,7 @@
           class="page_vitals_button_wrapper page_vitals_tab1_content_wrapper page_vitals_tab1_content_margin"
         >
           <p class="page_vitals_content_ul_heading">
-            Reduce unused JavaScript and defer loading scripts until they are
+            Desktop Reduce unused JavaScript and defer loading scripts until they are
             required to decrease bytes consumed by network activity.
           </p>
         </div>
