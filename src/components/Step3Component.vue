@@ -187,7 +187,7 @@
 
               <div class="page_vitals_copy_svg">
                 <div></div>
-                <svg
+                <svg  @click="copyText()"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
@@ -1371,6 +1371,33 @@ export default defineComponent({
       activeTab: "inbox",
     };
   },
+
+  methods: {
+    copyText() {
+      const container = document.querySelector('.page_vitals_raw_code');
+      if (!container) {
+        console.error('Container not found');
+        return;
+      }
+
+      // Extract text from all <p> elements inside the container
+      const texts = Array.from(container.querySelectorAll('p'))
+        .map(item => item.textContent.trim())
+        .join('\n');
+
+      // Create a temporary textarea to copy the text to the clipboard
+      const textarea = document.createElement('textarea');
+      textarea.value = texts;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+
+      // Optionally, you can show a notification or perform any other action after copying
+      alert('Text copied to clipboard!');
+    },
+  },
+
 });
 </script>
 
