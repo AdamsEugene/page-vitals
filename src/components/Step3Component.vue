@@ -83,7 +83,7 @@
     </div>
 
     <!-- ##################### Accordion section #######################-->
-    <div class="page_vitals_accordion-container">
+    <div class="page_vitals_accordion-container" style="overflow: scroll;">
       <div class="page_vitals_accordion_content_header">
         <div class="page_vitals_error_tabs_cover">
           <span
@@ -104,28 +104,8 @@
 
       <div
         class="page_vitals_inbox_content"
-        v-show="activeTab === 'inbox'"
-        ref="inboxContent"
-      >
-        <div id="element-to-convert">
-          .
-          <div>
-            <div style="display: block; text-align: center; margin: 0 auto">
-              <svg
-                class="hidden-svg"
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="34"
-                viewBox="0 0 27 34"
-                fill="none"
-              >
-                <path
-                  d="M26.75 20.2739V20.359C26.7394 22.1246 26.3522 23.8692 25.6125 25.4842C23.599 29.8468 18.6877 33.0048 13.6683 33.1667C13.546 33.1667 13.4124 33.1667 13.2759 33.1667C11.9408 33.1629 10.6143 32.9612 9.34282 32.5685C3.53568 30.7796 1.13547 25.4705 1.13547 25.4705C0.797123 24.7447 0.551689 23.9818 0.404604 23.1987C-0.448551 18.5947 2.48061 14.8057 3.06644 14.0484C3.75982 13.1542 4.56397 12.3452 5.46096 11.6394L7.07342 13.8838L5.75104 15.2556C5.37565 15.7056 3.00672 18.6386 3.76034 22.4963C4.65047 27.1058 9.22053 29.0813 9.97984 29.3309C10.1732 29.3968 10.378 29.4599 10.378 29.4599C11.4068 29.7768 12.4834 29.9252 13.5631 29.8989C17.3369 29.7782 21.0253 27.4131 22.5326 24.1371C23.0838 22.9073 23.3739 21.5835 23.3857 20.2437C23.4151 19.2872 23.2688 18.3332 22.9535 17.4259C22.7961 16.9942 22.6001 16.5765 22.3676 16.1775C21.2955 14.3145 15.5424 7.38113 14.0039 5.26847L12.1582 7.90793L17.0354 13.7877C17.4023 14.2679 17.7549 14.7727 18.082 15.2858C18.81 16.4245 19.3873 17.3244 19.7285 18.5152C20.0703 19.6069 20.1299 20.7627 19.902 21.8817C19.3332 24.2111 16.8477 26.6778 13.6456 26.7765C12.748 26.7939 11.8562 26.6342 11.0249 26.3073C10.1935 25.9803 9.44019 25.493 8.81101 24.8751C8.3105 24.4032 6.37953 22.6417 6.62694 20.0078C6.83454 17.7716 8.4726 16.4217 8.83945 16.1336L10.6197 18.3862C10.0686 18.9257 9.73743 19.6387 9.68692 20.3946C9.60445 21.8872 10.7448 22.8311 10.978 23.0149C11.4207 23.3445 11.9342 23.5744 12.4808 23.6879C13.0275 23.8013 13.5935 23.7954 14.1375 23.6706C14.8902 23.4557 15.553 23.0163 16.0307 22.4154C16.5084 21.8146 16.7765 21.0831 16.7965 20.326C16.8012 19.6827 16.62 19.0509 16.2733 18.5015L8.15409 7.97103L8.52379 7.46345C10.0822 5.32334 11.6406 3.18049 13.1991 1.0349L13.9214 0.0416679L14.7035 0.993741C15.1585 1.54249 15.6192 2.11867 16.0657 2.68388C18.4232 5.66356 23.0331 11.0632 25.1091 14.2459L25.1347 14.2843C26.1815 16.12 26.7367 18.1788 26.75 20.2739Z"
-                  fill="#00C191"
-                />
-              </svg>
-            </div>
-          </div>
+        v-show="activeTab === 'inbox'">
+        <div>
           <!-- Accordion 1 -->
           <div class="page_vitals_accordion_cover">
             <input
@@ -1020,13 +1000,6 @@
               </div>
             </div>
           </div>
-
-          <div class="hidden-address">
-            <p style="text-align: center; font-size: 13px; margin-top: 50px">
-              <a href="heatmap.com">Heatmap.com</a> <br />
-              7077 Macbeth Way Eldersberg, Delaware 21784
-            </p>
-          </div>
         </div>
       </div>
 
@@ -1389,6 +1362,55 @@
           </div>
         </div>
       </div>
+
+      <div ref="inboxContent" >
+        <div id="element-to-convert">
+          <div v-if="showContent">
+            <div style="display: flex; align-items: center; justify-content: start;" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 72 72" fill="none" class="pv_logo">
+              <path d="M54 42.4853V42.6008C53.9856 44.9994 53.4595 47.3695 52.4547 49.5635C49.7194 55.4899 43.0474 59.7801 36.2286 60C36.0625 60 35.8809 60 35.6955 60C33.8819 59.9949 32.0798 59.7209 30.3525 59.1874C22.4636 56.7572 19.2029 49.5448 19.2029 49.5448C18.7433 48.5588 18.4098 47.5225 18.21 46.4586C17.051 40.2042 21.0303 35.0567 21.8261 34.028C22.7681 32.8132 23.8605 31.7142 25.079 30.7554L27.2696 33.8044L25.4731 35.668C24.9631 36.2793 21.745 40.2638 22.7688 45.5044C23.978 51.7663 30.1864 54.45 31.2179 54.7892C31.4806 54.8787 31.7588 54.9644 31.7588 54.9644C33.1564 55.3949 34.619 55.5965 36.0857 55.5608C41.2124 55.3968 46.2231 52.1838 48.2707 47.7334C49.0195 46.0628 49.4136 44.2643 49.4297 42.4443C49.4696 41.1449 49.2708 39.8489 48.8424 38.6163C48.6287 38.0298 48.3624 37.4624 48.0466 36.9204C46.5901 34.3895 38.7746 24.9706 36.6845 22.1006L34.1772 25.6862L40.8028 33.6739C41.3012 34.3262 41.7803 35.012 42.2245 35.709C43.2136 37.2559 43.9978 38.4784 44.4614 40.0961C44.9257 41.5791 45.0066 43.1493 44.6971 44.6695C43.9244 47.834 40.5479 51.1849 36.1977 51.3191C34.9784 51.3427 33.7669 51.1257 32.6376 50.6816C31.5082 50.2374 30.4848 49.5754 29.6301 48.736C28.9501 48.0949 26.3269 45.702 26.663 42.1237C26.945 39.086 29.1703 37.2521 29.6687 36.8608L32.0871 39.9209C31.3385 40.6538 30.8886 41.6224 30.82 42.6493C30.7079 44.677 32.2571 45.9592 32.5739 46.2089C33.1753 46.6567 33.8728 46.969 34.6155 47.1232C35.3581 47.2773 36.1271 47.2693 36.8661 47.0997C37.8886 46.8078 38.7889 46.2109 39.4379 45.3946C40.0869 44.5783 40.4511 43.5846 40.4783 42.5561C40.4846 41.6822 40.2385 40.8239 39.7675 40.0774L28.7376 25.772L29.2399 25.0824C31.357 22.1751 33.4741 19.2641 35.5912 16.3493L36.5725 15L37.6349 16.2934C38.253 17.0388 38.8789 17.8216 39.4854 18.5894C42.6881 22.6373 48.9506 29.9727 51.7709 34.2964L51.8056 34.3485C53.2277 36.8423 53.9819 39.6391 54 42.4853Z" fill="#00936F"/>
+              </svg> <a href="" class="pv_logo_link">Heatmap.com</a>
+            </div>
+            <h3 class="pv_pdf_title">Error Messages for <a href="">www.cadenlane.com/</a> </h3>
+            <span class="pv_pdf_date">Downloaded on April 22, 2024</span>
+    
+            <table class="">
+            <tr>
+              <th>Urgency</th>
+              <th>Type</th>
+              <th>Instances</th>
+              <th>Message</th>
+              <th>Description</th>
+            </tr>
+            <tr style="word-wrap: break-word; word-break: break-all;">
+              <td class="pv_col1">Critical</td>
+              <td class="pv_col2">Error</td>
+              <td class="pv_col3">1</td>
+              <td class="pv_col4">Uncaught Error: Yotpo Loyalty SDK loader script already loaded Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</td>       
+             <td class="pv_col5">It appears there's an issue with a script called Yotpo Loyalty SDK loader. The error message indicates that this script is being loaded twice on your website, specifically on line 3 and line 92. To fix this, you'll need to find where this script is being loaded and remove one of the instances to prevent the duplication. This should resolve the error and ensure that everything functions properly on your website.</td>
+            </tr>
+            <tr style="word-wrap: break-word; word-break: break-all;">
+              <td class="pv_col1">Medium</td>
+              <td class="pv_col2">Warning</td>
+              <td class="pv_col3">3</td>
+              <td class="pv_col4">Uncaught (in promise) DOMException: Failed to execute 966447066?random=171...ent%3Dgtag.config:1
+                ‘joinAdInterestGroup’ on ‘Navigator’: May only joinAdInterestGroup from an https origin.
+                at https://td.doubleclick.net/td/rul/966447066?random=1710312084011&cv=11&fst=...mb=0&uap=mac0S&uapv=14.1.0&uaw=0&fledge=1&data=event%3Dgtag.config:1:19060
+              </td>       
+             <td class="pv_col5">There's an issue with trying to execute the joinAdInterestGroup function on the Navigator object. The error specifically states that this function can only be executed from an HTTPS origin, meaning the website must be served over HTTPS rather than HTTP. <br> <br>
+              To resolve this issue, ensure that your website is served over HTTPS rather than HTTP. This typically involves obtaining an SSL certificate for your domain and configuring your web server to serve content securely. Additionally, check if there are any scripts or plugins on your website attempting to use the joinAdInterestGroup function and ensure they are implemented correctly and securely.</td>
+            </tr>
+            <tr style="word-wrap: break-word; word-break: break-all;">
+              <td class="pv_col1">Critical</td>
+              <td class="pv_col2">Error</td>
+              <td class="pv_col3">1</td>
+              <td class="pv_col4">Uncaught Error: Yotpo Loyalty SDK loader script already loaded Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</td>       
+             <td class="pv_col5">It appears there's an issue with a script called Yotpo Loyalty SDK loader. The error message indicates that this script is being loaded twice on your website, specifically on line 3 and line 92. To fix this, you'll need to find where this script is being loaded and remove one of the instances to prevent the duplication. This should resolve the error and ensure that everything functions properly on your website.</td>
+            </tr>
+          </table>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -1402,23 +1424,12 @@ export default defineComponent({
   data() {
     return {
       activeTab: "inbox",
-      addressText: `Heatmap.com\n7077 Macbeth Way Eldersberg, Delaware 21784`,
-      textSize: 12,
+      showContent: false,
     };
   },
   methods: {
     generatePDF() {
-      const hiddenSvg = document.querySelector(".hidden-svg");
-      hiddenSvg.style.display = "inline";
-      const hiddenAddress = document.querySelector(".hidden-address");
-      hiddenAddress.style.display = "block";
-      // Update accordion styles before generating PDF
-      const accordionContents = document.querySelectorAll(
-        ".page_vitals_accordion-content"
-      );
-      accordionContents.forEach((content) => {
-        content.style.maxHeight = "unset";
-      });
+      this.showContent = true;
 
       html2pdf(document.getElementById("element-to-convert"), {
         margin: 0.3,
@@ -1428,24 +1439,19 @@ export default defineComponent({
           quality: 0.98,
         },
         html2canvas: {
-          dpi: 600,
+          dpi: 300,
           letterRendering: true,
           scale: 3,
         },
         jsPDF: {
           unit: "in",
-          format: "a4",
+          format: "a3",
           orientation: "portrait",
         },
       }).then(() => {
-        hiddenSvg.style.display = "none";
-        hiddenAddress.style.display = "none";
-        setTimeout(() => {
-          accordionContents.forEach((content) => {
-            content.style.maxHeight = "0";
-          });
-        }, 0.01);
-      });
+    // After PDF is generated, hide the content again
+    this.showContent = false;
+  });
     },
   },
 });
@@ -1758,4 +1764,90 @@ export default defineComponent({
 .hidden-address {
   display: none;
 }
+
+
+/* pdf template style */
+.pv_logo_link{
+  color: var(--Grey-900, #1A2835);
+text-align: center;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration: none;
+}
+
+.pv_pdf_title{
+  color: var(--Grey-900, #1A2835);
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px;
+margin-top: 0px;
+margin-bottom: -10px;
+padding: 0px 15px 0px 15px;
+}
+
+.pv_pdf_title > a{
+  /* text-decoration: none; */
+  color: var(--Grey-900, #1A2835);
+}
+
+.pv_pdf_date{
+  color: var(--Grey-900, #1A2835);
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 100% */
+padding: 0px 15px 0px 15px;
+display: block;
+margin-bottom: 50px;
+}
+
+.pv_logo{
+  display: inline;
+    margin-left: unset;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    /* margin: 0px 20px 0px 20px; */
+    /* padding: 40px; */
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: start;
+  }
+
+  th, td {
+    border-right: none !important; /* Remove right border */
+    border-top: 1px solid #ddd; /* Add top border */
+    border-bottom: 1px solid #ddd !important; 
+    padding: 18px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 13px;
+    color: #1A2835;
+  }
+
+  td{
+    font-weight: 500;
+    line-height: 157.143%;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+    .pv_col1 { width: 10%; }
+    .pv_col2 { width: 10%; }
+    .pv_col3 { width: 10%; }
+    .pv_col4 { width: 25%; }
+    .pv_col5 { width: 35%; }
 </style>
