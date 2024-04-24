@@ -206,7 +206,7 @@
           <span
             id="page_vital_copy_text"
             class="page_vitals_tab1_content_header"
-            @click="copyMobile" >Copy All</span
+            @click="copyText('.mobile_recommendation_container')">Copy All</span
           >
         </div>
       </div>
@@ -385,7 +385,7 @@
           <span
             id="page_vital_copy_text"
             class="page_vitals_tab1_content_header"
-            @click="copyDesktop">Copy All</span
+            @click="copyText('.desktop_recommendation_container')">Copy All</span
           >
         </div>
       </div>
@@ -472,7 +472,12 @@
           </div>
         </div>
       </section>
+
     </div>
+    <!-- Custom Notification -->
+<div v-if="showNotification" class="pv-custom-notification">
+Text copied to clipboard!
+</div>
   </div>
 </template>
 
@@ -483,14 +488,20 @@ export default defineComponent({
   data() {
     return {
       activeTab: "mobile",
+      showNotification: false,
     };
   },
   methods: {
     changeTab(tab) {
       this.activeTab = tab;
     },
-    copyMobile() {
-      const container = document.querySelector('.mobile_recommendation_container');
+    copyText(containerSelector: string) {
+      const container = document.querySelector(containerSelector);
+      if (!container) {
+        console.error(`Container not found: ${containerSelector}`);
+        return;
+      }
+
       const texts = Array.from(container.querySelectorAll('.page_vitals_content_ul_heading'))
         .map(item => item.textContent.trim())
         .join('\n');
@@ -502,22 +513,10 @@ export default defineComponent({
       document.execCommand('copy');
       document.body.removeChild(textarea);
 
-      alert('Text copied to clipboard!');
-    },
-    copyDesktop() {
-      const container = document.querySelector('.desktop_recommendation_container');
-      const texts = Array.from(container.querySelectorAll('.page_vitals_content_ul_heading'))
-        .map(item => item.textContent.trim())
-        .join('\n');
-
-      const textarea = document.createElement('textarea');
-      textarea.value = texts;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-
-      alert('Text copied to clipboard!');
+      this.showNotification = true;
+      setTimeout(() => {
+        this.showNotification = false;
+      }, 5000); 
     },
   },
 });
@@ -806,5 +805,24 @@ export default defineComponent({
 [tooltip][flow^="down"]:hover::before,
 [tooltip][flow^="down"]:hover::after {
   animation: tooltips-vert 300ms ease-out forwards;
+}
+
+.pv-custom-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #009688;
+  color: white;
+  border-radius: 5px;
+  z-index: 9999;
+  display: inline-block;
+  animation: pv_fadeOut 5s forwards;
+}
+
+@keyframes pv_fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 </style>
