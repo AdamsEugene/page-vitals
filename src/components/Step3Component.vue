@@ -83,7 +83,7 @@
     </div>
 
     <!-- ##################### Accordion section #######################-->
-    <div class="page_vitals_accordion-container" style="overflow: scroll;">
+    <div class="page_vitals_accordion-container">
       <div class="page_vitals_accordion_content_header">
         <div class="page_vitals_error_tabs_cover">
           <span
@@ -1441,7 +1441,7 @@ export default defineComponent({
         html2canvas: {
           dpi: 300,
           letterRendering: true,
-          scale: 3,
+          scale: 6,
         },
         jsPDF: {
           unit: "in",
