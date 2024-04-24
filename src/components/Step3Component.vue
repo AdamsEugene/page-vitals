@@ -1359,6 +1359,10 @@
         </div>
       </div>
     </div>
+
+    <div v-if="showNotification" class="pv-custom-notification">
+Text copied to clipboard!
+</div>
   </section>
 </template>
 
@@ -1369,6 +1373,7 @@ export default defineComponent({
   data() {
     return {
       activeTab: "inbox",
+      showNotification: false,
     };
   },
 
@@ -1380,12 +1385,10 @@ export default defineComponent({
         return;
       }
 
-      // Extract text from all <p> elements inside the container
       const texts = Array.from(container.querySelectorAll('p'))
         .map(item => item.textContent.trim())
         .join('\n');
 
-      // Create a temporary textarea to copy the text to the clipboard
       const textarea = document.createElement('textarea');
       textarea.value = texts;
       document.body.appendChild(textarea);
@@ -1393,8 +1396,10 @@ export default defineComponent({
       document.execCommand('copy');
       document.body.removeChild(textarea);
 
-      // Optionally, you can show a notification or perform any other action after copying
-      alert('Text copied to clipboard!');
+      this.showNotification = true;
+      setTimeout(() => {
+        this.showNotification = false;
+      }, 5000); 
     },
   },
 
@@ -1697,5 +1702,24 @@ export default defineComponent({
 [tooltip][flow^="down"]:hover::before,
 [tooltip][flow^="down"]:hover::after {
   animation: tooltips-vert 300ms ease-out forwards;
+}
+
+.pv-custom-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #009688;
+  color: white;
+  border-radius: 5px;
+  z-index: 9999;
+  display: inline-block;
+  animation: pv_fadeOut 5s forwards;
+}
+
+@keyframes pv_fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 </style>
