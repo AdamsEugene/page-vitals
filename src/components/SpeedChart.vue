@@ -1,7 +1,7 @@
 <template>
   <div id="chart">
     <apexchart
-      type="rangeArea"
+      type="area"
       height="350"
       :options="chartOptions"
       :series="series"
@@ -19,75 +19,39 @@ export default defineComponent({
   },
   data() {
     return {
-      series: [
-        {
-          name: "New York",
-          type: "rangeArea",
-          data: [
-            { x: "Jan", y: [11, 15] },
-            { x: "Feb", y: [11, 15] },
-            { x: "Mar", y: [11, 15] },
-          ],
-        },
-        {
-          name: "Average",
-          type: "area",
-          data: [
-            { x: "Jan", y: 7 },
-            { x: "Feb", y: 13 },
-            { x: "Mar", y: 5 },
-          ],
-          fill: {
-            type: "gradient",
-            gradient: {
-              shadeIntensity: 1,
-              inverseColors: false,
-              shade: "light",
-              type: "vertical",
-              opacityFrom: 0.7,
-              opacityTo: 0.9,
-              stops: [0, 90, 100],
-            },
-          },
-        },
-      ],
+      series: [{
+        name: "Area",
+        data: [1, 40, 5, 50, 49, 60, 130, 91]
+      }],
       chartOptions: {
         chart: {
           height: 350,
-          type: "area",
-          stacked: true,
-        },
-        stroke: {
-          curve: ["straight", "smooth"],
-          width: [0, 2],
-        },
-        markers: {
-          hover: {
-            sizeOffset: 5,
-          },
+          type: "area"
         },
         dataLabels: {
-          enabled: false,
+          enabled: false
+        },
+        stroke: {
+          curve: "smooth"
+        },
+        colors: ["#008FFB"], // Primary color for the line
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 100]
+          }
         },
         xaxis: {
-          labels: {
-            rotate: -35,
+          categories: [1, 2, 3, 4, 5, 6, 7, 8]
+        },
+        tooltip: {
+          x: {
+            format: "dd/MM/yy HH:mm"
           },
-        },
-        yaxis: {
-          labels: {
-            formatter: (val: number) => {
-              return val + "°C";
-            },
-          },
-        },
-        legend: {
-          show: false,
-        },
-        grid: {
-          show: false,
-        },
-        colors: ["#E91E63", "#03C191"],
+        }
       },
     };
   },

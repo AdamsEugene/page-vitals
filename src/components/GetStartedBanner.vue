@@ -1,5 +1,6 @@
 <template>
   <div id="pv_stuff">
+    <!-- <WelcomeModal /> -->
     <get-started v-if="showGetStarted" :closeGestated="closeGestated" />
     <div v-else class="pv_gs_banner">
       <div class="pv_close_b">
@@ -79,6 +80,7 @@ import GetStarted from "./GetStarted.vue";
 import MarskImage from "./MarksImage.vue";
 import SiteSpeed from "./SiteSpeed.vue";
 import ErrorMsg from "./ErrorMsg.vue";
+import WelcomeModal from "./WelcomeModal.vue";
 
 export default defineComponent({
   data() {
@@ -86,7 +88,14 @@ export default defineComponent({
       showGetStarted: false,
     };
   },
-  components: { CheckSvg, GetStarted, MarskImage, SiteSpeed, ErrorMsg },
+  components: {
+    CheckSvg,
+    GetStarted,
+    MarskImage,
+    SiteSpeed,
+    ErrorMsg,
+    WelcomeModal,
+  },
   methods: {
     closeGestated() {
       this.showGetStarted = false;

@@ -187,7 +187,8 @@
 
               <div class="page_vitals_copy_svg">
                 <div></div>
-                <svg  @click="copyText()"
+                <svg
+                  @click="copyText()"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
@@ -1361,8 +1362,8 @@
     </div>
 
     <div v-if="showNotification" class="pv-custom-notification">
-Text copied to clipboard!
-</div>
+      Text copied to clipboard!
+    </div>
   </section>
 </template>
 
@@ -1379,30 +1380,29 @@ export default defineComponent({
 
   methods: {
     copyText() {
-      const container = document.querySelector('.page_vitals_raw_code');
+      const container = document.querySelector(".page_vitals_raw_code");
       if (!container) {
-        console.error('Container not found');
+        console.error("Container not found");
         return;
       }
 
-      const texts = Array.from(container.querySelectorAll('p'))
-        .map(item => item.textContent.trim())
-        .join('\n');
+      const texts = Array.from(container.querySelectorAll("p"))
+        .map((item) => item.textContent.trim())
+        .join("\n");
 
-      const textarea = document.createElement('textarea');
+      const textarea = document.createElement("textarea");
       textarea.value = texts;
       document.body.appendChild(textarea);
       textarea.select();
-      document.execCommand('copy');
+      document.execCommand("copy");
       document.body.removeChild(textarea);
 
       this.showNotification = true;
       setTimeout(() => {
         this.showNotification = false;
-      }, 5000); 
+      }, 5000);
     },
   },
-
 });
 </script>
 
@@ -1719,7 +1719,11 @@ export default defineComponent({
 }
 
 @keyframes pv_fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 </style>

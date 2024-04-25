@@ -1,7 +1,7 @@
 <template>
   <div class="pv_body">
     <div id="bg_svg">
-      <img src="../assets/welcome.svg" alt="" width="100%" height="100%" />
+        <img src="../assets/images/bg.png" alt="" width="100%" height="100%" />
     </div>
     <section v-if="gettingStarted">
       <steppers-component :closeGestated="closeGestated" />
