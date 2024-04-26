@@ -1374,38 +1374,27 @@
             <h3 class="pv_pdf_title">Error Messages for <a href="">www.cadenlane.com/</a> </h3>
             <span class="pv_pdf_date">Downloaded on April 22, 2024</span>
     
-            <table class="">
+            <table style="width: 100%; border-collapse: collapse; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px; align-self: start;">
             <tr>
-              <th>Urgency</th>
-              <th>Type</th>
-              <th>Instances</th>
-              <th>Message</th>
-              <th>Description</th>
+              <th  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;">Urgency</th>
+              <th  style=" border-right: none !important;  border-top: 1px solid #dd4d; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;">Type</th>
+              <th  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;">Instances</th>
+              <th  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;">Message</th>
+              <th  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;">Description</th>
             </tr>
             <tr style="word-wrap: break-word; word-break: break-all;">
-              <td class="pv_col1">Critical</td>
-              <td class="pv_col2">Error</td>
-              <td class="pv_col3">1</td>
-              <td class="pv_col4">Uncaught Error: Yotpo Loyalty SDK loader script already loaded Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</td>       
-             <td class="pv_col5">It appears there's an issue with a script called Yotpo Loyalty SDK loader. The error message indicates that this script is being loaded twice on your website, specifically on line 3 and line 92. To fix this, you'll need to find where this script is being loaded and remove one of the instances to prevent the duplication. This should resolve the error and ensure that everything functions properly on your website.</td>
+              <td class="pv_col1"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835; font-weight: 500; line-height: 157.143%;">Critical</td>
+              <td class="pv_col2"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;  font-weight: 500; line-height: 157.143%;">Error</td>
+              <td class="pv_col3"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;  font-weight: 500; line-height: 157.143%;">1</td>
+              <td class="pv_col4"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;  font-weight: 500; line-height: 157.143%;">Uncaught Error: Yotpo Loyalty SDK loader script already loaded Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</td>       
+             <td class="pv_col5"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;  font-weight: 500; line-height: 157.143%;">It appears there's an issue with a script called Yotpo Loyalty SDK loader. The error message indicates that this script is being loaded twice on your website, specifically on line 3 and line 92. To fix this, you'll need to find where this script is being loaded and remove one of the instances to prevent the duplication. This should resolve the error and ensure that everything functions properly on your website.</td>
             </tr>
             <tr style="word-wrap: break-word; word-break: break-all;">
-              <td class="pv_col1">Medium</td>
-              <td class="pv_col2">Warning</td>
-              <td class="pv_col3">3</td>
-              <td class="pv_col4">Uncaught (in promise) DOMException: Failed to execute 966447066?random=171...ent%3Dgtag.config:1
-                ‘joinAdInterestGroup’ on ‘Navigator’: May only joinAdInterestGroup from an https origin.
-                at https://td.doubleclick.net/td/rul/966447066?random=1710312084011&cv=11&fst=...mb=0&uap=mac0S&uapv=14.1.0&uaw=0&fledge=1&data=event%3Dgtag.config:1:19060
-              </td>       
-             <td class="pv_col5">There's an issue with trying to execute the joinAdInterestGroup function on the Navigator object. The error specifically states that this function can only be executed from an HTTPS origin, meaning the website must be served over HTTPS rather than HTTP. <br> <br>
-              To resolve this issue, ensure that your website is served over HTTPS rather than HTTP. This typically involves obtaining an SSL certificate for your domain and configuring your web server to serve content securely. Additionally, check if there are any scripts or plugins on your website attempting to use the joinAdInterestGroup function and ensure they are implemented correctly and securely.</td>
-            </tr>
-            <tr style="word-wrap: break-word; word-break: break-all;">
-              <td class="pv_col1">Critical</td>
-              <td class="pv_col2">Error</td>
-              <td class="pv_col3">1</td>
-              <td class="pv_col4">Uncaught Error: Yotpo Loyalty SDK loader script already loaded Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</td>       
-             <td class="pv_col5">It appears there's an issue with a script called Yotpo Loyalty SDK loader. The error message indicates that this script is being loaded twice on your website, specifically on line 3 and line 92. To fix this, you'll need to find where this script is being loaded and remove one of the instances to prevent the duplication. This should resolve the error and ensure that everything functions properly on your website.</td>
+              <td class="pv_col1"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835; font-weight: 500; line-height: 157.143%;">Critical</td>
+              <td class="pv_col2"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;  font-weight: 500; line-height: 157.143%;">Error</td>
+              <td class="pv_col3"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;  font-weight: 500; line-height: 157.143%;">1</td>
+              <td class="pv_col4"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;  font-weight: 500; line-height: 157.143%;">Uncaught Error: Yotpo Loyalty SDK loader script already loaded Tx60AxAaFloLi0S769Y...aby.myshopify.com:3</td>       
+             <td class="pv_col5"  style=" border-right: none !important;  border-top: 1px solid #ddd; border-bottom: 1px solid #ddd !important;  padding: 18px; text-align: left; vertical-align: top; font-size: 13px; color: #1A2835;  font-weight: 500; line-height: 157.143%;">It appears there's an issue with a script called Yotpo Loyalty SDK loader. The error message indicates that this script is being loaded twice on your website, specifically on line 3 and line 92. To fix this, you'll need to find where this script is being loaded and remove one of the instances to prevent the duplication. This should resolve the error and ensure that everything functions properly on your website.</td>
             </tr>
           </table>
           </div>
@@ -1812,34 +1801,6 @@ margin-bottom: 50px;
     margin-bottom: 0px;
     cursor: pointer;
 }
-
-table {
-    width: 100%;
-    /* margin: 0px 20px 0px 20px; */
-    /* padding: 40px; */
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    align-self: start;
-  }
-
-  th, td {
-    border-right: none !important; /* Remove right border */
-    border-top: 1px solid #ddd; /* Add top border */
-    border-bottom: 1px solid #ddd !important; 
-    padding: 18px;
-    text-align: left;
-    vertical-align: top;
-    font-size: 13px;
-    color: #1A2835;
-  }
-
-  td{
-    font-weight: 500;
-    line-height: 157.143%;
-  }
 
   tr:nth-child(even) {
     background-color: #f2f2f2;
